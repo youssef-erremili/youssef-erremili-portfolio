@@ -38,5 +38,5 @@ document.addEventListener("DOMContentLoaded", function () {
     const alert = document.querySelector('#loader');
     setTimeout(() => {
         alert.classList.add('hide');
-    }, 4000);
+    }, 5000);
 });
