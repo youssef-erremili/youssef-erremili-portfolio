@@ -31,3 +31,12 @@ function fetchProjcts() {
 document.addEventListener('DOMContentLoaded', function () {
     fetchProjcts();
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // And use "DOMContentLoaded" method to make sure 
+    const alert = document.querySelector('#loader');
+    setTimeout(() => {
+        alert.classList.add('hide');
+    }, 4000);
+});
