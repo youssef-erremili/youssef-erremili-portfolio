@@ -60,7 +60,7 @@ input {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    animation: fadeOut 4s ease-in-out 0.2s alternate;
+    animation: fadeOut 6s ease-in-out 0.1s alternate;
     opacity: 0;
     text-align: center;
 }
