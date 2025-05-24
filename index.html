@@ -10,193 +10,658 @@
     <meta name="author" content="youssef erremili">
     <meta name="robots" content="index, follow">
     <meta name="revisit-after" content="1 day">
-    <meta name="google-site-verification" content="I1UvVvGRetYe6w5BFFAJ9-k-bObXe66vnR7FEAbNXrs" />
-    <link rel="shortcut icon" href="assets/image/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
-    <script defer src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#8b5cf6',
+                        accent: '#06b6d4',
+                        dark: '#0f172a',
+                        'dark-light': '#1e293b',
+                        'dark-lighter': '#334155'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'poppins': ['Poppins', 'sans-serif']
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'slide-up': 'slideUp 0.6s ease-out forwards',
+                        'fade-in': 'fadeIn 0.8s ease-out forwards'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes glow {
+            from { box-shadow: 0 0 20px rgba(99, 102, 241, 0.3); }
+            to { box-shadow: 0 0 30px rgba(99, 102, 241, 0.6); }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+        }
+        .section-bg {
+            background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+        }
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        .loader.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .loader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(99, 102, 241, 0.3);
+            border-top: 3px solid #6366f1;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background: linear-gradient(90deg, #6366f1, #8b5cf6);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+        .tech-tag {
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            transition: all 0.3s ease;
+        }
+        .tech-tag:hover {
+            background: rgba(99, 102, 241, 0.2);
+            border-color: rgba(99, 102, 241, 0.5);
+        }
+    </style>
 </head>
 
-<body>
-    <div class="loader-container" id="loader">
-        <h1>youssef erremili</h1>
-        <h1>full-stack developer</h1>
-        <div class="loader"></div>
-    </div>
-    <div class="container-COE">
-        <main>
-            <div class="headerContent">
-                <img src="assets/image/dots.svg" id="dotsImg" alt="dots">
-                <h3 class="heyStat">Hey there!,</h3>
-                <h1 class="admin">I am, <span> Youssef Erremili</span></h1>
-                <article class="descAdmin">
-                    <span>Full Stack Developer.</span>
-                    A self-taught developer with an interest in Web Development.
-                </article>
-            </div>
-            <div class="formlink">
-                <a href="assets/file/YoussefErremili.pdf" download target="_blank" class="linkContact Resume">
-                    <ion-icon name="reader-outline"></ion-icon>
-                    Resume
-                </a>
-                <a href="https://github.com/youssef-erremili" target="_blank" class="linkContact Github">
-                    <ion-icon name="logo-github"></ion-icon>
-                    Github
-                </a>
-                <a href="https://linkedin.com/in/youssef-erremili-100070296" target="_blank"
-                    class="linkContact Linkedin">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                    linkedin
-                </a>
-                <a href="mailto:yousseferremili.dev@gmail.com" class="linkContact Email">
-                    <ion-icon name="mail-outline"></ion-icon>
-                    Email
-                </a>
-            </div>
-            <div class="aboutMe">
-                <div class="head-litle">
-                    <h1>about Me</h1>
-                    <p>I would like to share some details about me and what I'm all about! Let's dive in.</p>
-                </div>
-                <div class="profile">
-                    <div class="about">
-                        <div class="admin-profile">
-                            <img src="assets/image/admin.jpg" alt="Youssef Erremili">
-                        </div>
-                        <div class="profile-description">
-                            <h2>youssef erremili</h2>
-                            <p class="text-gray-500">Hello there, my name youssef erremili, i'm 24 years old,I am a
-                                proficient full-stack developer with expertise in HTML5, CSS3, JavaScript, API,
-                                Tailwind, PHP, and MySQL. I studied web development at Solicode.</p>
-                            <p>Where I gained hands-on experience through creating various real projects, including
-                                creating an interactive web application like web translator and more. I hold a
-                                baccalaureate in literature from high school of Sidi Allal Tazi in 2019.</p>
-                            <p>I am currently studying english language and literature at Ibn Tofail University. I have
-                                professional experience at Aptiv, where I ensured efficient cable distribution.</p>
-                            <p>I am skilled in tools such as Git and GitHub and have foundational knowledge in SEO and
-                                UI/UX design. I am known for my adaptability, communication skills, decision making ,and
-                                creative abilities.</p>
-                        </div>
-                    </div>
-                    <div class="edoContainer">
-                        <div class="col front">
-                            <h2>front-end</h2>
-                            <ul>
-                                <li>HTML5</li>
-                                <li>CSS3</li>
-                                <li>JavaScript</li>
-                                <li>Vue.js</li>
-                                <li>Tailwind</li>
-                                <li>bootstrap</li>
-                            </ul>
-                        </div>
-                        <div class="col back">
-                            <h2>back-end</h2>
-                            <ul>
-                                <li>PHP</li>
-                                <li>MySQL</li>
-                                <li>Laravel</li>
-                            </ul>
-                        </div>
-                        <div class="col tools">
-                            <h2>tools</h2>
-                            <ul>
-                                <li>Git&Github</li>
-                                <li>MVC</li>
-                                <li>SEO</li>
-                                <li>Microsoft office</li>
-                                <li>UI/UX</li>
-                                <li>PostMan</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="project" x-data='{ open: false, description: "", link: "", demo: "", technologies:[] }'>
-                <div class="head-litle">
-                    <h1>my project</h1>
-                    <p>I'm eager to share the projects I create during my learning journey. Feel free to take a look and
-                        dive in.</p>
-                </div>
-                <div class="box">
-                    <h1 class="creative-title">All Creative Works.</h1>
-                    <p>Explore our projects built with HTML, CSS, JavaScript, PHP, and MySQL for a seamless experience.
-                        Enjoy dynamic content, sleek design, and user-friendly features throughout your visit.</p>
-                </div>
-                <div class="projectContainer">
-                    <div class="projects" id="projects"></div>
-                </div>
-                <div>
-                    <div @click.outside="open = false" x-show="open" x-transition.scale.80 x-transition.scale.origin.top
-                        x-transition.opacity.duration.500ms
-                        class="fixed inset-0 w-full h-full px- bg-black bg-opacity-70">
-                        <div
-                            class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg mx-auto px-4">
-                            <div class="bg-slate-950 rounded-md shadow-lg">
-                                <div class="flex items-center justify-between p-4">
-                                    <h2 class="text-lg font-medium text-white capitalize">project details</h2>
-                                    <button @click="open = false"
-                                        class="p-2 text-gray-400 rounded-md hover:bg-gray-100">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mx-auto"
-                                            viewBox="0 0 20 20" fill="currentColor">
-                                            <path fill-rule="evenodd"
-                                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                                clip-rule="evenodd" />
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="space-y-2 p-4 mt-3 text-[15.5px] leading-relaxed text-gray-500">
-                                    <p class="description" x-text="description"></p>
-                                    <div class="flex flex-wrap">
-                                        <template x-for="tech in technologies">
-                                            <span class="tech" x-text="tech"></span>
-                                        </template>
-                                    </div>
-                                    <template x-if="demo == false">
-                                        <div class="flex items-center p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400"
-                                            role="alert">
-                                            <svg class="flex-shrink-0 inline w-4 h-4 me-3" aria-hidden="true"
-                                                xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                viewBox="0 0 20 20">
-                                                <path
-                                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
-                                            </svg>
-                                            <span class="sr-only">Info</span>
-                                            <div>
-                                                <p>We are currently working on hosting this project and will have it
-                                                    live as soon as possible.</p>
-                                            </div>
-                                        </div>
-                                    </template>
-                                </div>
-                                <div class="flex justify-between items-center gap-3 p-4">
-                                    <button @click="open = false"
-                                        class="px-3 py-2 text-white rounded-md hover:bg-slate-800">
-                                        Close
-                                    </button>
-                                    <div>
-                                        <a :href="demo" x-show="demo" target="_blank"
-                                            class="mr-1 px-2.5 py-1.5 text-[14.5px] font-light text-white bg-slate-800 rounded-md outline-none ring-offset-2 ring-slate-800 focus:ring-2">Demo</a>
-                                        <a :href="link" x-show="link" target="_blank"
-                                            class="px-2.5 py-1.5 text-[14.5px] font-light text-white bg-slate-800 rounded-md outline-none ring-offset-2 ring-slate-800 focus:ring-2">Source
-                                            Code</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-        <footer>
-            <p>Designed and Developed by <strong>Youssef Erremili</strong></p>
-        </footer>
+<body class="bg-dark text-white font-inter overflow-x-hidden">
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <h1 class="text-4xl font-bold gradient-text mb-4">Youssef Erremili</h1>
+        <p class="text-xl text-gray-400 mb-8">Full-Stack Developer</p>
+        <div class="loader-spinner"></div>
     </div>
 
-    <script src="assets/main.js"></script>
-    <!-- <script src="assets/js.js"></script> -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-effect">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold gradient-text">YE</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link hover:text-primary">Home</a>
+                    <a href="#about" class="nav-link hover:text-primary">About</a>
+                    <a href="#projects" class="nav-link hover:text-primary">Projects</a>
+                    <a href="#contact" class="nav-link hover:text-primary">Contact</a>
+                </div>
+                <button class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen hero-bg flex items-center justify-center relative overflow-hidden">
+        <!-- Floating Elements -->
+        <div class="absolute top-20 left-10 w-20 h-20 bg-primary/20 rounded-full animate-float"></div>
+        <div class="absolute bottom-20 right-10 w-32 h-32 bg-secondary/20 rounded-full animate-float" style="animation-delay: -2s;"></div>
+        <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-accent/20 rounded-full animate-float" style="animation-delay: -4s;"></div>
+        
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="animate-slide-up">
+                <p class="text-accent text-lg mb-4 font-medium">Hey there! 👋</p>
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                    I'm <span class="gradient-text">Youssef Erremili</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                    Full Stack Developer passionate about creating beautiful and functional web experiences
+                </p>
+                <p class="text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+                    A self-taught developer with an interest in Web Development, specializing in modern technologies and user-centered design.
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+                    <a href="#projects" class="bg-gradient-to-r from-primary to-secondary px-8 py-4 rounded-full text-white font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 animate-glow">
+                        View My Work
+                    </a>
+                    <a href="assets/file/YoussefErremili.pdf" download target="_blank" class="glass-effect px-8 py-4 rounded-full text-white font-semibold hover:bg-white/10 transition-all duration-300 flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        Download Resume
+                    </a>
+                </div>
+
+                <!-- Social Links -->
+                <div class="flex justify-center space-x-6">
+                    <a href="https://github.com/youssef-erremili" target="_blank" class="glass-effect p-4 rounded-full hover:bg-white/10 transition-all duration-300 hover:scale-110">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/youssef-erremili-100070296" target="_blank" class="glass-effect p-4 rounded-full hover:bg-white/10 transition-all duration-300 hover:scale-110">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:yousseferremili.dev@gmail.com" class="glass-effect p-4 rounded-full hover:bg-white/10 transition-all duration-300 hover:scale-110">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 section-bg relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    About <span class="gradient-text">Me</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                    I would like to share some details about me and what I'm all about! Let's dive in.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
+                <!-- Profile Image -->
+                <div class="relative">
+                    <div class="glass-effect rounded-3xl p-8 text-center">
+                        <div class="w-64 h-64 mx-auto mb-8 relative">
+                            <div class="w-full h-full rounded-full bg-gradient-to-r from-primary to-secondary p-1">
+                                <div class="w-full h-full rounded-full bg-gray-400 overflow-hidden">
+                                    <img src="assets/image/admin.jpg" alt="Youssef Erremili" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="absolute -top-4 -right-4 w-12 h-12 bg-accent rounded-full flex items-center justify-center">
+                                <span class="text-2xl">👋</span>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold gradient-text mb-2">Youssef Erremili</h3>
+                        <p class="text-gray-400">Full Stack Developer</p>
+                    </div>
+                </div>
+
+                <!-- About Content -->
+                <div class="space-y-6">
+                    <div class="glass-effect rounded-2xl p-6">
+                        <h3 class="text-xl font-semibold mb-4 text-primary">My Story</h3>
+                        <p class="text-gray-300 leading-relaxed mb-4">
+                            Hello there! I'm a 24-year-old proficient full-stack developer with expertise in modern web technologies. I studied web development at Solicode, where I gained hands-on experience through creating various real projects.
+                        </p>
+                        <p class="text-gray-300 leading-relaxed mb-4">
+                            I hold a baccalaureate in literature from high school of Sidi Allal Tazi in 2019 and am currently studying English language and literature at Ibn Tofail University. I have professional experience at Aptiv, where I ensured efficient cable distribution.
+                        </p>
+                        <p class="text-gray-300 leading-relaxed">
+                            I'm known for my adaptability, communication skills, decision making, and creative abilities. I'm passionate about creating interactive web applications and always eager to learn new technologies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Grid -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Frontend -->
+                <div class="glass-effect rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary">Frontend</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-tag px-3 py-1 rounded-full text-sm">HTML5</span>
+                        <span class="tech-tag px-3 py-1 rounded-full text-sm">CSS3</span>
+                        <span class="tech-tag px-3 py-1 rounded-full text-sm">JavaScript</span>
+                        <span class="tech-tag px-3 py-1 rounded-full text-sm">Vue.js</span>
+                        <span class="tech-tag px-3 py-1 rounded-full text-sm">Tailwind</span>
+                        <span class="tech-tag px-3 py-1 rounded-full text-sm">Bootstrap</span>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="glass-effect rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-secondary to-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary">Backend</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-tag px-3 py-1 rounded-full text-sm">PHP</span>
+                        <span class="tech-tag px-3 py-1 rounded-full text-sm">MySQL</span>
+                        <span class="tech-tag px-3 py-1 rounded-full text-sm">Laravel</span>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="glass-effect rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-r from-accent to-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-accent">Tools</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-tag px-3 py-1 rounded-full text-sm">Git & GitHub</span>
+                        <span class="tech-tag px-3 py-1 rounded-full text-sm">MVC</span>
+                        <span class="tech-tag px-3 py-1 rounded-full text-sm">SEO</span>
+                        <span class="tech-tag px-3 py-1 rounded-full text-sm">Microsoft Office</span>
+                        <span class="tech-tag px-3 py-1 rounded-full text-sm">UI/UX</span>
+                        <span class="tech-tag px-3 py-1 rounded-full text-sm">Postman</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 hero-bg">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    My <span class="gradient-text">Projects</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
+                    I'm eager to share the projects I create during my learning journey. Feel free to take a look and dive in.
+                </p>
+                <div class="glass-effect rounded-2xl p-8 max-w-4xl mx-auto">
+                    <h3 class="text-2xl font-bold gradient-text mb-4">All Creative Works</h3>
+                    <p class="text-gray-300">
+                        Explore projects built with HTML, CSS, JavaScript, PHP, and MySQL for a seamless experience. 
+                        Enjoy dynamic content, sleek design, and user-friendly features throughout your visit.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Projects will be loaded here via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 section-bg">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                Let's <span class="gradient-text">Connect</span>
+            </h2>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-12">
+                Ready to bring your ideas to life? Let's collaborate and create something amazing together!
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a href="mailto:yousseferremili.dev@gmail.com" class="glass-effect px-8 py-4 rounded-full text-white font-semibold hover:bg-white/10 transition-all duration-300 flex items-center gap-3 hover:scale-105">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    Get In Touch
+                </a>
+                <a href="https://linkedin.com/in/youssef-erremili-100070296" target="_blank" class="bg-gradient-to-r from-primary to-secondary px-8 py-4 rounded-full text-white font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-3">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    Connect on LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-gray-800">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">
+                Designed and Developed by <strong class="gradient-text">Youssef Erremili</strong>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black bg-opacity-80">
+        <div class="glass-effect rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 id="modal-title" class="text-2xl font-bold gradient-text">Project Details</h3>
+                    <button onclick="closeModal()" class="glass-effect p-2 rounded-full hover:bg-white/10 transition-all">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="space-y-4">
+                    <p id="modal-description" class="text-gray-300 leading-relaxed"></p>
+                    
+                    <div id="modal-technologies" class="flex flex-wrap gap-2"></div>
+                    
+                    <div id="modal-notice" class="hidden glass-effect p-4 rounded-lg border border-blue-500/30">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                            </svg>
+                            <p class="text-blue-300 text-sm">
+                                We are currently working on hosting this project and will have it live as soon as possible.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-3 pt-4">
+                        <button onclick="closeModal()" class="glass-effect px-6 py-2 rounded-full hover:bg-white/10 transition-all">
+                            Close
+                        </button>
+                        <div class="flex gap-2">
+                            <a id="modal-demo" href="#" target="_blank" class="hidden bg-gradient-to-r from-primary to-secondary px-6 py-2 rounded-full text-white hover:shadow-lg transition-all">
+                                Demo
+                            </a>
+                            <a id="modal-source" href="#" target="_blank" class="hidden glass-effect px-6 py-2 rounded-full hover:bg-white/10 transition-all">
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sample projects data - replace with your actual projects
+        const projects = [
+            {
+                title: "E-Commerce Platform",
+                description: "A full-stack e-commerce platform built with PHP, MySQL, and modern frontend technologies. Features include user authentication, product management, shopping cart, and payment integration.",
+                technologies: ["PHP", "MySQL", "JavaScript", "HTML5", "CSS3", "Bootstrap"],
+                demo: "https://example.com/demo1",
+                source: "https://github.com/youssef-erremili/ecommerce-platform",
+                image: "https://via.placeholder.com/400x250/6366f1/ffffff?text=E-Commerce"
+            },
+            {
+                title: "Task Management App",
+                description: "A Vue.js application for managing daily tasks and projects. Includes drag-and-drop functionality, real-time updates, and collaborative features for team productivity.",
+                technologies: ["Vue.js", "JavaScript", "Tailwind CSS", "PHP", "MySQL"],
+                demo: false,
+                source: "https://github.com/youssef-erremili/task-manager",
+                image: "https://via.placeholder.com/400x250/8b5cf6/ffffff?text=Task+Manager"
+            },
+            {
+                title: "Web Translator",
+                description: "An interactive web application that provides real-time translation services. Built with modern JavaScript and integrated with translation APIs for seamless user experience.",
+                technologies: ["JavaScript", "HTML5", "CSS3", "API Integration", "Tailwind CSS"],
+                demo: "https://example.com/translator",
+                source: "https://github.com/youssef-erremili/web-translator",
+                image: "https://via.placeholder.com/400x250/06b6d4/ffffff?text=Translator"
+            },
+            {
+                title: "Portfolio Website",
+                description: "A responsive portfolio website showcasing my work and skills. Built with modern design principles, smooth animations, and optimized for all devices.",
+                technologies: ["HTML5", "CSS3", "JavaScript", "Tailwind CSS", "SEO"],
+                demo: "https://youssef-erremili.com",
+                source: "https://github.com/youssef-erremili/portfolio",
+                image: "https://via.placeholder.com/400x250/f59e0b/ffffff?text=Portfolio"
+            },
+            {
+                title: "Restaurant Management",
+                description: "A comprehensive restaurant management system with order tracking, inventory management, and customer service features. Built using Laravel framework.",
+                technologies: ["Laravel", "PHP", "MySQL", "Bootstrap", "JavaScript"],
+                demo: false,
+                source: "https://github.com/youssef-erremili/restaurant-management",
+                image: "https://via.placeholder.com/400x250/ef4444/ffffff?text=Restaurant"
+            },
+            {
+                title: "Weather Dashboard",
+                description: "A beautiful weather dashboard application that provides real-time weather information, forecasts, and interactive maps using weather APIs.",
+                technologies: ["JavaScript", "API Integration", "Chart.js", "CSS3", "HTML5"],
+                demo: "https://example.com/weather",
+                source: "https://github.com/youssef-erremili/weather-dashboard",
+                image: "https://via.placeholder.com/400x250/10b981/ffffff?text=Weather"
+            }
+        ];
+
+        // Loader functionality
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.getElementById('loader').classList.add('fade-out');
+                setTimeout(() => {
+                    document.getElementById('loader').style.display = 'none';
+                }, 500);
+            }, 2000);
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Load projects
+        function loadProjects() {
+            const container = document.getElementById('projects-container');
+            container.innerHTML = '';
+
+            projects.forEach((project, index) => {
+                const projectCard = document.createElement('div');
+                projectCard.className = 'project-card glass-effect rounded-2xl overflow-hidden hover:scale-105 transition-all duration-300 cursor-pointer';
+                projectCard.onclick = () => openModal(project);
+                
+                projectCard.innerHTML = `
+                    <div class="relative">
+                        <img src="${project.image}" alt="${project.title}" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <h3 class="text-xl font-bold text-white mb-2">${project.title}</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-300 text-sm mb-4 line-clamp-2">${project.description}</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            ${project.technologies.slice(0, 3).map(tech => 
+                                `<span class="tech-tag px-2 py-1 rounded-full text-xs">${tech}</span>`
+                            ).join('')}
+                            ${project.technologies.length > 3 ? `<span class="tech-tag px-2 py-1 rounded-full text-xs">+${project.technologies.length - 3}</span>` : ''}
+                        </div>
+                        <div class="flex gap-2">
+                            ${project.demo ? `<span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs">Live Demo</span>` : ''}
+                            <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs">Source Available</span>
+                        </div>
+                    </div>
+                `;
+                
+                container.appendChild(projectCard);
+            });
+        }
+
+        // Modal functionality
+        function openModal(project) {
+            const modal = document.getElementById('project-modal');
+            const title = document.getElementById('modal-title');
+            const description = document.getElementById('modal-description');
+            const technologies = document.getElementById('modal-technologies');
+            const notice = document.getElementById('modal-notice');
+            const demo = document.getElementById('modal-demo');
+            const source = document.getElementById('modal-source');
+
+            title.textContent = project.title;
+            description.textContent = project.description;
+            
+            // Clear and populate technologies
+            technologies.innerHTML = '';
+            project.technologies.forEach(tech => {
+                const span = document.createElement('span');
+                span.className = 'tech-tag px-3 py-1 rounded-full text-sm';
+                span.textContent = tech;
+                technologies.appendChild(span);
+            });
+
+            // Handle demo and source links
+            if (project.demo) {
+                demo.href = project.demo;
+                demo.classList.remove('hidden');
+                notice.classList.add('hidden');
+            } else {
+                demo.classList.add('hidden');
+                notice.classList.remove('hidden');
+            }
+
+            if (project.source) {
+                source.href = project.source;
+                source.classList.remove('hidden');
+            } else {
+                source.classList.add('hidden');
+            }
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('project-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            // Add mobile menu functionality here if needed
+            console.log('Mobile menu toggle');
+        }
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(15, 23, 42, 0.95)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.05)';
+            }
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            loadProjects();
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateElements = document.querySelectorAll('.glass-effect, .project-card');
+            animateElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'all 0.6s ease-out';
+                observer.observe(el);
+            });
+        });
+    </script>
 </body>
 
 </html>
