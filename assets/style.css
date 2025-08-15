@@ -42,7 +42,7 @@
 button,
 textarea,
 input {
-    font-family: "Poppins", sans-serif;
+    font-family: JetBrains Mono, monospace;
     font-size: 1.02rem;
 }
 
@@ -149,7 +149,7 @@ input {
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: JetBrains Mono, monospace;
     background-color: var(--shade-blue);
     width: 100%;
     min-height: 100vh;
@@ -279,23 +279,15 @@ main .formlink a.Resume ion-icon {
 
 .aboutMe .head-litle h1,
 .project .head-litle h1 {
-    font-size: 3.4rem;
+    font-size: 2.5rem;
     color: var(--white);
     text-transform: capitalize;
-}
-
-.aboutMe .head-litle p,
-.project .head-litle p {
-    font-size: 1.1rem;
-    color: var(--gray--color);
-    font-weight: 300;
-    text-wrap: balance;
 }
 
 
 .aboutMe .profile {
     border-radius: 0.5rem;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--green);
     width: 100%;
     min-height: 100vh;
     margin: 2rem auto 10rem auto;
@@ -305,9 +297,11 @@ main .formlink a.Resume ion-icon {
 }
 
 .aboutMe .profile .edoContainer {
-    justify-content: space-evenly;
-    width: 100%;
-    margin-top: 2.2rem;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 2rem;
+    width: 80%;
+    margin: auto auto;
 }
 
 .aboutMe .profile .edoContainer .col h2 {
@@ -318,7 +312,7 @@ main .formlink a.Resume ion-icon {
     font-weight: 500;
 }
 
-.aboutMe .profile .edoContainer .col li {
+/* .aboutMe .profile .edoContainer .col li {
     font-size: 0.9rem;
     color: var(--gray--color);
     margin: 0.4rem 0 0.4rem 0.8rem;
@@ -327,7 +321,8 @@ main .formlink a.Resume ion-icon {
     letter-spacing: 0.06rem;
     list-style-type: decimal;
     text-align: left;
-}
+    background-color: red;
+} */
 
 .aboutMe .profile .about {
     align-items: center;
@@ -351,17 +346,8 @@ main .formlink a.Resume ion-icon {
     letter-spacing: 0.4px;
 }
 
-.aboutMe .profile .about .admin-profile img {
-    width: 70%;
-    border-radius: 50%;
-    border: 3px solid #ffffff00;
-    outline: 3px solid var(--green);
-    margin-left: 4rem;
-}
-
 .profile .about .profile-description p {
     margin: 0.6rem 0;
-    padding: 0 2.2rem;
     color: var(--gray--color);
     font-size: 1.05rem;
 }
@@ -378,11 +364,6 @@ main .formlink a.Resume ion-icon {
     overflow: hidden;
     margin: 2.2rem 0;
     border-bottom: 1px solid var(--border-color);
-}
-
-.project .box .creative-title {
-    color: var(--light-yellow);
-    font-size: 4rem;
 }
 
 .project .box p {

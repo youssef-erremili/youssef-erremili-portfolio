@@ -13,16 +13,16 @@
     <meta name="google-site-verification" content="I1UvVvGRetYe6w5BFFAJ9-k-bObXe66vnR7FEAbNXrs" />
     <link rel="shortcut icon" href="assets/image/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
     <script defer src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <div class="loader-container" id="loader">
+    <!-- <div class="loader-container" id="loader">
         <h1>youssef erremili</h1>
         <h1>full-stack developer</h1>
         <div class="loader"></div>
-    </div>
+    </div> -->
     <div class="container-COE">
         <main>
             <div class="headerContent">
@@ -53,140 +53,178 @@
                     Email
                 </a>
             </div>
-            <div class="aboutMe">
-                <div class="head-litle">
-                    <h1>about Me</h1>
-                    <p>I would like to share some details about me and what I'm all about! Let's dive in.</p>
-                </div>
-                <div class="profile">
-                    <div class="about">
-                        <div class="admin-profile">
-                            <img src="assets/image/admin.jpg" alt="Youssef Erremili">
-                        </div>
-                        <div class="profile-description">
-                            <h2>youssef erremili</h2>
-                            <p class="text-gray-500">Hello there, my name youssef erremili, i'm 24 years old,I am a
-                                proficient full-stack developer with expertise in HTML5, CSS3, JavaScript, API,
-                                Tailwind, PHP, and MySQL. I studied web development at Solicode.</p>
-                            <p>Where I gained hands-on experience through creating various real projects, including
-                                creating an interactive web application like web translator and more. I hold a
-                                baccalaureate in literature from high school of Sidi Allal Tazi in 2019.</p>
-                            <p>I am currently studying english language and literature at Ibn Tofail University. I have
-                                professional experience at Aptiv, where I ensured efficient cable distribution.</p>
-                            <p>I am skilled in tools such as Git and GitHub and have foundational knowledge in SEO and
-                                UI/UX design. I am known for my adaptability, communication skills, decision making ,and
-                                creative abilities.</p>
-                        </div>
-                    </div>
-                    <div class="edoContainer">
-                        <div class="col front">
-                            <h2>front-end</h2>
-                            <ul>
-                                <li>HTML5</li>
-                                <li>CSS3</li>
-                                <li>JavaScript</li>
-                                <li>Vue.js</li>
-                                <li>Tailwind</li>
-                                <li>bootstrap</li>
-                            </ul>
-                        </div>
-                        <div class="col back">
-                            <h2>back-end</h2>
-                            <ul>
-                                <li>PHP</li>
-                                <li>MySQL</li>
-                                <li>Laravel</li>
-                            </ul>
-                        </div>
-                        <div class="col tools">
-                            <h2>tools</h2>
-                            <ul>
-                                <li>Git&Github</li>
-                                <li>MVC</li>
-                                <li>SEO</li>
-                                <li>Microsoft office</li>
-                                <li>UI/UX</li>
-                                <li>PostMan</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="project" x-data='{ open: false, description: "", link: "", demo: "", technologies:[] }'>
-                <div class="head-litle">
-                    <h1>my project</h1>
-                    <p>I'm eager to share the projects I create during my learning journey. Feel free to take a look and
-                        dive in.</p>
-                </div>
-                <div class="box">
-                    <h1 class="creative-title">All Creative Works.</h1>
-                    <p>Explore our projects built with HTML, CSS, JavaScript, PHP, and MySQL for a seamless experience.
-                        Enjoy dynamic content, sleek design, and user-friendly features throughout your visit.</p>
-                </div>
-                <div class="projectContainer">
-                    <div class="projects" id="projects"></div>
-                </div>
-                <div>
-                    <div @click.outside="open = false" x-show="open" x-transition.scale.80 x-transition.scale.origin.top
-                        x-transition.opacity.duration.500ms
-                        class="fixed inset-0 w-full h-full px- bg-black bg-opacity-70">
-                        <div
-                            class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg mx-auto px-4">
-                            <div class="bg-slate-950 rounded-md shadow-lg">
-                                <div class="flex items-center justify-between p-4">
-                                    <h2 class="text-lg font-medium text-white capitalize">project details</h2>
-                                    <button @click="open = false"
-                                        class="p-2 text-gray-400 rounded-md hover:bg-gray-100">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mx-auto"
-                                            viewBox="0 0 20 20" fill="currentColor">
-                                            <path fill-rule="evenodd"
-                                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                                clip-rule="evenodd" />
-                                        </svg>
-                                    </button>
+            <div>
+                <div class="container my-10 py-10 rounded-lg bg-white/5 mx-auto">
+                    <div class="flex items-center justify-between">
+                        <div class="flex-1 flex gap-4 items-center justify-center">
+                            <div class="flex items-center gap-4">
+                                <div class="flex items-center gap-4">
+                                    <span class="text-4xl text-white xl:text-6xl font-extrabold">25</span>
+                                    <p class="max-w-[100px] text-white/80">Age</p>
                                 </div>
-                                <div class="space-y-2 p-4 mt-3 text-[15.5px] leading-relaxed text-gray-500">
-                                    <p class="description" x-text="description"></p>
-                                    <div class="flex flex-wrap">
-                                        <template x-for="tech in technologies">
-                                            <span class="tech" x-text="tech"></span>
+                            </div>
+                        </div>
+                        <div class="flex-1 flex gap-4 items-center justify-center">
+                            <div class="flex items-center gap-4">
+                                <div class="flex items-center gap-4">
+                                    <span class="text-4xl text-white xl:text-6xl font-extrabold">1</span>
+                                    <p class="max-w-[150px] text-white/80">Years of experience</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-1 flex gap-4 items-center justify-center">
+                            <div class="flex items-center gap-4">
+                                <div class="flex items-center gap-4">
+                                    <span class="text-4xl text-white text-white xl:text-6xl font-extrabold">12</span>
+                                    <p class="max-w-[150px] text-white/80">Projects I worked on</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-1 flex gap-4 items-center justify-center">
+                            <div class="flex items-center gap-4">
+                                <div class="flex items-center gap-4">
+                                    <span class="text-4xl text-white xl:text-6xl font-extrabold">4</span>
+                                    <p class="max-w-[150px] text-white/80">Projects Delievered</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </section>
+                <div class="aboutMe">
+                    <div class="head-litle">
+                        <h1>about <span class="text-[#3CCF91] font-semibold">Me</span></h1>
+                    </div>
+                    <div class="profile">
+                        <div class="about">
+                            <div class="relative w-[28%] h-[90%] flex-shrink-0">
+                                <img src="assets/image/admin.webp" alt="Youssef Erremili" 
+                                class="w-full h-full object-cover rounded-3xl outline outline-green-200 border-4 border shadow-md transition-transform duration-300 hover:scale-105">
+                            </div>
+                            <div class="profile-description">
+                                <h2>youssef erremili</h2>
+                                <p class="text-gray-500">Hello there, my name youssef erremili, i'm 25 years old,I am a
+                                    proficient full-stack developer with expertise in HTML5, CSS3, JavaScript, API,
+                                    Tailwind, PHP, and MySQL. I studied web development at Solicode.</p>
+                                <p>Where I gained hands-on experience through creating various real projects, including
+                                    creating an interactive web application like web translator and more. I hold a
+                                    baccalaureate in literature from high school of Sidi Allal Tazi in 2019.</p>
+                                <p>I am currently studying english language and literature at Ibn Tofail University. I
+                                    have professional experience at Aptiv, where I ensured efficient cable distribution.</p>
+                                <p>I am skilled in tools such as Git and GitHub and have foundational knowledge in SEO 
+                                    and UI/UX design. I am known for my adaptability, communication skills, 
+                                    decision making ,and creative abilities.</p>
+                            </div>
+                        </div>
+                        <div class="edoContainer !mt-20">
+                            <div class="col front">
+                                <h2>front-end skills</h2>
+                                <ul class="flex items-align">
+                                    <li class="px-3 md:px-4 py-1.5 md:py-2 bg-orange-500/10 rounded-full text-orange-400 text-xs md:text-sm">HTML5</li>
+                                    <li class="mx-2 px-3 md:px-4 py-1.5 md:py-2 bg-blue-500/10 rounded-full text-blue-400 text-xs md:text-sm">CSS3</li>
+                                    <li class="mx-2 px-3 md:px-4 py-1.5 md:py-2 bg-yellow-500/10 rounded-full text-yellow-400 text-xs md:text-sm">JavaScript</li>
+                                    <li class="mx-2 px-3 md:px-4 py-1.5 md:py-2 bg-green-500/10 rounded-full text-green-400 text-xs md:text-sm">Vue.js</li>
+                                    <li class="mx-2 px-3 md:px-4 py-1.5 md:py-2 bg-red-500/10 rounded-full text-red-400 text-xs md:text-sm">Tailwind</li>
+                                    <li class="mx-2 px-3 md:px-4 py-1.5 md:py-2 bg-indigo-500/10 rounded-full text-indigo-400 text-xs md:text-sm">bootstrap</li>
+                                </ul>
+                            </div>
+                            <div class="col back">
+                                <h2>back-end skills</h2>
+                                <ul class="flex items-align">
+                                    <li class="px-3 md:px-4 py-1.5 md:py-2 bg-pink-500/10 rounded-full text-pink-400 text-xs md:text-sm">PHP</li>
+                                    <li class="mx-2 px-3 md:px-4 py-1.5 md:py-2 bg-amber-500/10 rounded-full text-amber-400 text-xs md:text-sm">MySQL</li>
+                                    <li class="mx-2 px-3 md:px-4 py-1.5 md:py-2 bg-teal-500/10 rounded-full text-teal-400 text-xs md:text-sm">Laravel</li>
+                                </ul>
+                            </div>
+                            <div class="col tools">
+                                <h2>tools</h2>
+                                <ul class="flex items-align">
+                                    <li class="px-3 md:px-4 py-1.5 md:py-2 bg-purple-500/10 rounded-full text-purple-400 text-xs md:text-sm">Git and Github</li>
+                                    <li class="mx-2 px-3 md:px-4 py-1.5 md:py-2 bg-orange-500/10 rounded-full text-orange-400 text-xs md:text-sm">Rest APIs</li>
+                                    <li class="mx-2 px-3 md:px-4 py-1.5 md:py-2 bg-blue-500/10 rounded-full text-blue-400 text-xs md:text-sm">Microsoft office</li>
+                                    <li class="mx-2 px-3 md:px-4 py-1.5 md:py-2 bg-green-500/10 rounded-full text-green-400 text-xs md:text-sm">UI/UX</li>
+                                    <li class="mx-2 px-3 md:px-4 py-1.5 md:py-2 bg-red-500/10 rounded-full text-red-400 text-xs md:text-sm">Visual studio code</li>
+                                    <li class="mx-2 px-3 md:px-4 py-1.5 md:py-2 bg-yellow-500/10 rounded-full text-yellow-400 text-xs md:text-sm">PostMan</li>
+                                    <li class="mx-2 px-3 md:px-4 py-1.5 md:py-2 bg-cyan-500/10 rounded-full text-cyan-400 text-xs md:text-sm">SEO</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project" x-data='{ open: false, description: "", link: "", demo: "", technologies:[] }'>
+                    <div class="head-litle">
+                        <h1>my <span class="text-[#3CCF91] font-semibold">project</span></h1>
+                    </div>
+                    <div>
+                        <h1 class="creative-title text-3xl font-bold text-[#faf089] uppercase tracking-wide mb-4 drop-shadow-md">All Creative Works.</h1>
+                        <p class="text-lg text-slate-500 leading-relaxed">
+                            "Creativity is intelligence having fun." – Albert Einstein<br>Perfect for someone sparking innovation and joy in their web projects!
+                        </p>
+                    </div>
+                    <div class="projectContainer">
+                        <div class="projects" id="projects"></div>
+                    </div>
+                    <div>
+                        <div @click.outside="open = false" x-show="open" x-transition.scale.80
+                            x-transition.scale.origin.top x-transition.opacity.duration.500ms
+                            class="fixed inset-0 w-full h-full px- bg-black bg-opacity-70">
+                            <div
+                                class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg mx-auto px-4">
+                                <div class="bg-slate-950 rounded-md shadow-lg">
+                                    <div class="flex items-center justify-between p-4">
+                                        <h2 class="text-lg font-medium text-white capitalize">project details</h2>
+                                        <button @click="open = false"
+                                            class="p-2 text-gray-400 rounded-md hover:bg-gray-100">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mx-auto"
+                                                viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd"
+                                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="space-y-2 p-4 mt-3 text-[15.5px] leading-relaxed text-gray-500">
+                                        <p class="description" x-text="description"></p>
+                                        <div class="flex flex-wrap">
+                                            <template x-for="tech in technologies">
+                                                <span class="tech" x-text="tech"></span>
+                                            </template>
+                                        </div>
+                                        <template x-if="demo == false">
+                                            <div class="flex items-center p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400"
+                                                role="alert">
+                                                <svg class="flex-shrink-0 inline w-4 h-4 me-3" aria-hidden="true"
+                                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                    viewBox="0 0 20 20">
+                                                    <path
+                                                        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+                                                </svg>
+                                                <span class="sr-only">Info</span>
+                                                <div>
+                                                    <p>We are currently working on hosting this project and will have it
+                                                        live as soon as possible.</p>
+                                                </div>
+                                            </div>
                                         </template>
                                     </div>
-                                    <template x-if="demo == false">
-                                        <div class="flex items-center p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400"
-                                            role="alert">
-                                            <svg class="flex-shrink-0 inline w-4 h-4 me-3" aria-hidden="true"
-                                                xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                viewBox="0 0 20 20">
-                                                <path
-                                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
-                                            </svg>
-                                            <span class="sr-only">Info</span>
-                                            <div>
-                                                <p>We are currently working on hosting this project and will have it
-                                                    live as soon as possible.</p>
-                                            </div>
+                                    <div class="flex justify-between items-center gap-3 p-4">
+                                        <button @click="open = false"
+                                            class="px-3 py-2 text-white rounded-md hover:bg-slate-800">
+                                            Close
+                                        </button>
+                                        <div>
+                                            <a :href="demo" x-show="demo" target="_blank"
+                                                class="mr-1 px-2.5 py-1.5 text-[14.5px] font-light text-white bg-slate-800 rounded-md outline-none ring-offset-2 ring-slate-800 focus:ring-2">Demo</a>
+                                            <a :href="link" x-show="link" target="_blank"
+                                                class="px-2.5 py-1.5 text-[14.5px] font-light text-white bg-slate-800 rounded-md outline-none ring-offset-2 ring-slate-800 focus:ring-2">Source
+                                                Code</a>
                                         </div>
-                                    </template>
-                                </div>
-                                <div class="flex justify-between items-center gap-3 p-4">
-                                    <button @click="open = false"
-                                        class="px-3 py-2 text-white rounded-md hover:bg-slate-800">
-                                        Close
-                                    </button>
-                                    <div>
-                                        <a :href="demo" x-show="demo" target="_blank"
-                                            class="mr-1 px-2.5 py-1.5 text-[14.5px] font-light text-white bg-slate-800 rounded-md outline-none ring-offset-2 ring-slate-800 focus:ring-2">Demo</a>
-                                        <a :href="link" x-show="link" target="_blank"
-                                            class="px-2.5 py-1.5 text-[14.5px] font-light text-white bg-slate-800 rounded-md outline-none ring-offset-2 ring-slate-800 focus:ring-2">Source
-                                            Code</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </main>
         <footer>
             <p>Designed and Developed by <strong>Youssef Erremili</strong></p>
