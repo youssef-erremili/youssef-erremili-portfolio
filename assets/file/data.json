@@ -1,7 +1,7 @@
 {
     "projects": [
         {
-            "title": "weather website with API",
+            "title": "Weather website with API",
             "description": "The Weather Website Application is an interactive web platform that provides real-time weather information to users. This application harnesses HTML5, CSS3, and JavaScript technologies to create a user-friendly interface.",
             "image": "assets/image/weather-project.png",
             "technologies": [
@@ -36,7 +36,7 @@
             "demo": "https://youssef-erremili.github.io/Simple-portfolio/"
         },
         {
-            "title": "todo list with JavaScript",
+            "title": "ToDo list with JavaScript",
             "description": "I made a to-do list using HTML, CSS, and JavaScript. You can add, delete, and update tasks easily. It helps you stay organized and manage your tasks smoothly.",
             "image": "assets/image/todo-project.png",
             "technologies": [
@@ -48,7 +48,7 @@
             "demo": "https://youssef-erremili.github.io/To-Do-list/"
         },
         {
-            "title": "landing page school",
+            "title": "Landing page school",
             "description": "I made a cool landing page for school using HTML5 and CSS3. It shows off my work and skills in a neat and stylish way. Check it out to see what I can do.",
             "image": "assets/image/landing-page.png",
             "technologies": [
@@ -59,7 +59,7 @@
             "demo": "https://youssef-erremili.github.io/solicode-website-project/"
         },
         {
-            "title": "sign up form with validation",
+            "title": "Sign up form with validation",
             "description": "I designed a signup page using HTML, CSS, and JavaScript with validation. Users can enter their information, and JavaScript ensures that all fields are correctly filled out before submission.",
             "image": "assets/image/sign-up.png",
             "technologies": [
@@ -71,7 +71,7 @@
             "demo": "https://youssef-erremili.github.io/modern-sign-up-page/"
         },
         {
-            "title": "pos system management",
+            "title": "Pos system management",
             "description": "Our POS system combines HTML, CSS, JavaScript, PHP, and MySQL for efficient transaction handling and inventory management. With a user-friendly interface and real-time updates, it streamlines sales and optimizes business operations.",
             "image": "assets/image/pos-system.webp",
             "technologies": [
@@ -100,7 +100,7 @@
             "demo": ""
         },
         {
-            "title": "web translator with API",
+            "title": "Web translator with API",
             "description": "I created a web translator using HTML, CSS, JavaScript, PHP, MySQL, and an API. The interface is built with HTML and CSS, JavaScript manages interactions, and PHP connects to the MySQL database. The API handles the translations, making it a fast and user-friendly tool.",
             "image": "assets/image/web translator.webp",
             "technologies": [
@@ -129,7 +129,7 @@
             "demo": "https://temp-email-zeta.vercel.app/"
         },
         {
-            "title": "quotes generator with API",
+            "title": "Quotes generator with API",
             "description": "I created a quotes generator using HTML, Tailwind, and an API. The API generates random quotes, and the interface makes it easy to display and interact with them.",
             "image": "assets/image/quotegenerator.png",
             "technologies": [
@@ -173,7 +173,7 @@
             "demo": ""
         },
         {
-            "title": "laravel-alert package",
+            "title": "Laravel-alert package",
             "description": "This package is based on the Laravel Framework (php) and provides a simple, customizable way to manage alert messages in your Laravel application.",
             "image": "assets/image/alert.jpg",
             "technologies": [
