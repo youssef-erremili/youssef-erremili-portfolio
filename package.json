@@ -1,0 +1,11 @@
+{
+  "name": "youssef-erremili-portfolio-1",
+  "version": "1.0.0",
+  "scripts": {
+    "build:css": "tailwindcss -i ./assets/input.css -o ./assets/output.css --minify",
+    "watch:css": "tailwindcss -i ./assets/input.css -o ./assets/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
