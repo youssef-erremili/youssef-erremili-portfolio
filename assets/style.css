@@ -206,18 +206,14 @@ main .headerContent h1.admin {
 }
 
 main .headerContent h1.admin span {
-    position: relative;
+    background-image: linear-gradient(180deg, transparent 65%, var(--crimson) 65%, var(--crimson) 85%, transparent 85%);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    display: inline;
 }
 
 main .headerContent h1.admin span::after {
-    content: "";
-    position: absolute;
-    left: 0%;
-    bottom: 0.9rem;
-    width: 100%;
-    height: 2vh;
-    z-index: -1;
-    background-color: var(--crimson);
+    display: none;
 }
 
 main .headerContent article.descAdmin {
@@ -554,8 +550,7 @@ footer p strong {
     }
 
     main .headerContent h1.admin span::after {
-        bottom: 0.7rem;
-        height: 0.8vh;
+        display: none;
     }
 
     .profile .about .profile-description p {

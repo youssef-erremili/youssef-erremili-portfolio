@@ -187,8 +187,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project"
-                    x-data='{ open: false, description: "", link: "", demo: "", technologies:[], image: "" }'>
+                <div class="project" x-data="portfolio">
                     <div class="head-litle">
                         <h1>my <span class="text-[#3CCF91] font-semibold">project</span></h1>
                     </div>
@@ -202,7 +201,54 @@
                         </p>
                     </div>
                     <div class="projectContainer">
-                        <div class="projects" id="projects"></div>
+                        <div id="projects"
+                            class="!grid !grid-cols-1 md:!grid-cols-2 lg:!grid-cols-3 gap-8 gap-y-12 py-10 w-full">
+                            <template x-for="(project, index) in projects" :key="index">
+                                <div
+                                    class="flex items-start gap-4 transition-transform hover:-translate-y-1 duration-300 w-full">
+                                    <div class="text-4xl lg:text-5xl font-extrabold text-white/10 select-none hidden sm:block"
+                                        x-text="String(index + 1).padStart(2, '0')"></div>
+
+                                    <div class="w-16 h-16 sm:w-20 sm:h-20 shrink-0 rounded-lg overflow-hidden bg-slate-800 ring-1 ring-white/10 mt-1 cursor-pointer group"
+                                        @click='open = true; demo = project.demo; link = project.link; technologies = project.technologies; image = project.image; description = project.description'>
+                                        <img :src="project.image" :alt="project.title"
+                                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                    </div>
+
+                                    <div class="flex flex-col gap-1.5 w-full">
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center gap-2">
+                                                <div
+                                                    class="w-5 h-5 rounded-full bg-slate-700 text-white flex items-center justify-center text-[10px] font-bold">
+                                                    Y</div>
+                                                <span class="text-xs text-gray-400 font-medium">Youssef Erremili</span>
+                                            </div>
+                                            <div class="text-3xl font-extrabold text-white/10 select-none sm:hidden"
+                                                x-text="String(index + 1).padStart(2, '0')"></div>
+                                        </div>
+
+                                        <h3 @click='open = true; demo = project.demo; link = project.link; technologies = project.technologies; image = project.image; description = project.description'
+                                            class="font-bold capitalize text-white text-[15px] leading-snug hover:text-[#3CCF91] cursor-pointer transition-colors max-w-[90%] capitalize"
+                                            x-text="project.title">                                            
+                                        </h3>
+
+                                        <div class="flex flex-wrap items-center gap-1.5 mt-1">
+                                            <template x-for="tech in project.technologies.slice(0, 3)">
+                                                <span
+                                                    :class="'px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider ' + getColorClass(tech)"
+                                                    x-text="tech"></span>
+                                            </template>
+
+                                            <template x-if="project.technologies.length > 3">
+                                                <span
+                                                    class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-slate-800 text-slate-400 uppercase"
+                                                    x-text="'+' + (project.technologies.length - 3)"></span>
+                                            </template>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
                     </div>
                     <div>
                         <div @click.outside="open = false" x-show="open" x-transition.scale.80
@@ -239,7 +285,8 @@
                                                 Technologies</h3>
                                             <div class="flex flex-wrap gap-2">
                                                 <template x-for="tech in technologies">
-                                                    <span class="px-3 py-1.5 text-xs font-semibold rounded-full bg-white/5 text-gray-300 border border-white/10 tracking-wide uppercase"
+                                                    <span
+                                                        class="px-3 py-1.5 text-xs font-semibold rounded-full bg-white/5 text-gray-300 border border-white/10 tracking-wide uppercase"
                                                         x-text="tech"></span>
                                                 </template>
                                             </div>

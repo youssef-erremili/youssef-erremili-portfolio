@@ -1,5 +1,5 @@
 {
-  "name": "youssef-erremili-portfolio-1",
+  "name": "youssef-erremili-portfolio",
   "version": "1.0.0",
   "scripts": {
     "build:css": "tailwindcss -i ./assets/input.css -o ./assets/output.css --minify",
