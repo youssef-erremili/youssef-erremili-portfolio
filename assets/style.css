@@ -79,7 +79,14 @@ input {
     }
 }
 
-.loader-container h1 {
+.loader-container .h1-loader {
+    text-transform: capitalize;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--green);
+}
+
+.loader-container .h2-loader {
     text-transform: capitalize;
     font-size: 2.5rem;
     font-weight: 700;
