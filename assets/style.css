@@ -166,7 +166,8 @@ main .formlink,
 }
 
 .container-COE {
-    width: 85%;
+    width: 90%;
+    max-width: 1400px;
     min-height: inherit;
     margin: 0 auto;
 }
@@ -200,9 +201,11 @@ main .headerContent h3.heyStat {
 }
 
 main .headerContent h1.admin {
-    font-size: 5rem;
+    font-size: clamp(2.5rem, 8vw, 5rem);
     color: var(--white);
     font-weight: 600;
+    line-height: 1.1;
+    margin: 0.5rem 0;
 }
 
 main .headerContent h1.admin span {
@@ -218,8 +221,9 @@ main .headerContent h1.admin span::after {
 
 main .headerContent article.descAdmin {
     color: var(--white-sm);
-    font-size: 2.4rem;
+    font-size: clamp(1.2rem, 4vw, 2.4rem);
     display: inline-block;
+    max-width: 800px;
 }
 
 main .headerContent article.descAdmin span {
@@ -229,11 +233,12 @@ main .headerContent article.descAdmin span {
 
 main .formlink {
     padding: 0.5rem 0 0 3rem;
+    flex-wrap: wrap;
 }
 
 main .formlink a.linkContact {
     background-color: #202022;
-    padding: 0.7rem 2.4rem;
+    padding: 0.7rem 1.5rem;
     margin: 0.6rem 0.6rem 0 0;
     border-radius: 0.3rem;
     font-size: 0.9rem;
@@ -241,7 +246,7 @@ main .formlink a.linkContact {
     color: var(--white-sm);
     align-items: center;
     display: flex;
-    line-height: 0%;
+    white-space: nowrap;
 }
 
 main .formlink a.linkContact ion-icon {
@@ -293,11 +298,12 @@ main .formlink a.Resume ion-icon {
 }
 
 .aboutMe .profile .edoContainer {
+    display: flex;
     justify-content: space-between;
     flex-direction: column;
-    gap: 2rem;
-    width: 80%;
-    margin: auto auto;
+    gap: 3rem;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .aboutMe .profile .edoContainer .col h2 {
@@ -322,19 +328,23 @@ main .formlink a.Resume ion-icon {
 
 .aboutMe .profile .about {
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 1rem;
 }
 
 .aboutMe .profile .about .admin-profile {
-    width: 40%;
+    width: 100%;
+    max-width: 300px;
 }
 
 .aboutMe .profile .about .profile-description {
-    width: 60%;
+    width: 100%;
+    max-width: 800px;
 }
 
 .aboutMe .profile .about .profile-description h2 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 600;
     text-transform: capitalize;
     margin: 1.2rem 0;
@@ -442,6 +452,7 @@ footer p strong {
         display: flex;
         text-align: center;
         flex-direction: column;
+        padding-top: 3rem;
     }
 
     .aboutMe .profile .about .admin-profile img {
@@ -499,8 +510,7 @@ footer p strong {
     }
 
     main .headerContent h1.admin {
-        font-size: 3.2rem;
-        text-wrap: nowrap;
+        text-wrap: balance;
     }
 
     main .headerContent article.descAdmin {
@@ -541,10 +551,6 @@ footer p strong {
 }
 
 @media only screen and (max-width: 500px) {
-    main .headerContent h1.admin {
-        font-size: 2.2rem;
-    }
-
     .projectContainer .project-box h1 {
         font-size: 1.110rem !important;
     }
@@ -554,15 +560,37 @@ footer p strong {
     }
 
     .profile .about .profile-description p {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
         padding: 0.5rem 0.1rem;
+        line-height: 1.6;
     }
 
     .project .box .creative-title {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
     }
 
     footer p strong {
         display: block;
+        margin-top: 0.5rem;
+    }
+
+    .aboutMe .profile .edoContainer ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+        padding: 0;
+    }
+
+    .aboutMe .profile .edoContainer li {
+        margin: 0 !important;
+        white-space: nowrap;
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .aboutMe .profile .edoContainer .col h2 {
+        font-size: 1.4rem;
+        text-align: center;
+        margin-bottom: 1rem;
     }
 }
