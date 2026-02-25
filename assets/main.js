@@ -39,8 +39,13 @@ document.addEventListener('alpine:init', () => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const alert = document.querySelector('#loader');
-    setTimeout(() => {
-        alert.classList.add('hide');
-    }, 3200);
+    const loader = document.querySelector('#loader');
+    if (loader) {
+        setTimeout(() => {
+            loader.classList.add('fade-out');
+            setTimeout(() => {
+                loader.classList.add('hide');
+            }, 800);
+        }, 3500);
+    }
 });
