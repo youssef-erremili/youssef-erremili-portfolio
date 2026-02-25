@@ -75,17 +75,18 @@
         rel="stylesheet">
 </head>
 
-<body>
-    <div class="loader-container" id="loader">
+<body class="bg-[#000f19]">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div class="loader-container" id="loader" aria-hidden="true">
         <h1 class="h1-loader">youssef erremili</h1>
         <h1 class="h2-loader">full-stack developer</h1>
         <div class="loader"></div>
     </div>
     <div class="container-COE">
-        <main>
+        <main id="main-content">
             <div class="headerContent">
-                <img src="assets/image/dots.svg" id="dotsImg" alt="Decorative dots background pattern" width="128"
-                    height="128" fetchpriority="high">
+                <img src="assets/image/dots.svg" id="dotsImg" alt="" aria-hidden="true" width="128" height="128"
+                    fetchpriority="high">
                 <h3 class="heyStat">Hey there!,</h3>
                 <h1 class="admin">I am, <span> Youssef Erremili</span></h1>
                 <article class="descAdmin">
@@ -94,24 +95,25 @@
                 </article>
             </div>
             <div class="formlink">
-                <a href="assets/file/YoussefErremili.pdf" download target="_blank" class="linkContact Resume"
-                    aria-label="Download Youssef Erremili's Resume">
-                    <img src="assets/image/resume.svg" class="iconSVG" alt="">
+                <a href="assets/file/YoussefErremili.pdf" download target="_blank" rel="noopener noreferrer"
+                    class="linkContact Resume" aria-label="Download Youssef Erremili's Resume (PDF)">
+                    <img src="assets/image/resume.svg" class="iconSVG" alt="" aria-hidden="true">
                     Resume
                 </a>
-                <a href="https://github.com/youssef-erremili" target="_blank" class="linkContact Github"
-                    aria-label="Visit Youssef Erremili's GitHub profile">
-                    <img src="assets/image/github.svg" class="iconSVG" alt="">
+                <a href="https://github.com/youssef-erremili" target="_blank" rel="noopener noreferrer"
+                    class="linkContact Github" aria-label="Visit Youssef Erremili's GitHub profile (opens in new tab)">
+                    <img src="assets/image/github.svg" class="iconSVG" alt="" aria-hidden="true">
                     Github
                 </a>
-                <a href="https://linkedin.com/in/youssef-erremili-100070296" target="_blank"
-                    class="linkContact Linkedin" aria-label="Visit Youssef Erremili's LinkedIn profile">
-                    <img src="assets/image/linkedin.svg" class="iconSVG" alt="">
+                <a href="https://linkedin.com/in/youssef-erremili-100070296" target="_blank" rel="noopener noreferrer"
+                    class="linkContact Linkedin"
+                    aria-label="Visit Youssef Erremili's LinkedIn profile (opens in new tab)">
+                    <img src="assets/image/linkedin.svg" class="iconSVG" alt="" aria-hidden="true">
                     linkedin
                 </a>
                 <a href="mailto:yousseferremili.dev@gmail.com" class="linkContact Email"
                     aria-label="Send an email to Youssef Erremili">
-                    <img src="assets/image/email.svg" class="iconSVG" alt="">
+                    <img src="assets/image/email.svg" class="iconSVG" alt="" aria-hidden="true">
                     Email
                 </a>
             </div>
@@ -253,13 +255,13 @@
                         </p>
                     </div>
                     <div class="projectContainer">
-                        <div id="projects"
+                        <ul id="projects" role="list"
                             class="!grid !grid-cols-1 md:!grid-cols-2 lg:!grid-cols-3 gap-8 gap-y-12 py-10 w-full">
                             <template x-for="(project, index) in projects" :key="index">
-                                <div
+                                <li
                                     class="flex items-start gap-4 transition-transform hover:-translate-y-1 duration-300 w-full">
                                     <div class="text-4xl lg:text-5xl font-extrabold text-white/10 select-none hidden sm:block"
-                                        x-text="String(index + 1).padStart(2, '0')"></div>
+                                        aria-hidden="true" x-text="String(index + 1).padStart(2, '0')"></div>
 
                                     <div class="w-16 h-16 sm:w-20 sm:h-20 shrink-0 rounded-lg overflow-hidden bg-slate-800 ring-1 ring-white/10 mt-1 cursor-pointer group"
                                         @click='open = true; demo = project.demo; link = project.link; technologies = project.technologies; image = project.image; description = project.description'>
@@ -277,7 +279,7 @@
                                                 <span class="text-xs text-gray-400 font-medium">Youssef Erremili</span>
                                             </div>
                                             <div class="text-3xl font-extrabold text-white/10 select-none sm:hidden"
-                                                x-text="String(index + 1).padStart(2, '0')"></div>
+                                                aria-hidden="true" x-text="String(index + 1).padStart(2, '0')"></div>
                                         </div>
 
                                         <h3 @click='open = true; demo = project.demo; link = project.link; technologies = project.technologies; image = project.image; description = project.description'
@@ -299,13 +301,14 @@
                                             </template>
                                         </div>
                                     </div>
-                                </div>
+                                </li>
                             </template>
-                        </div>
+                        </ul>
                     </div>
                     <div>
                         <div @click.outside="open = false" x-show="open" x-transition.scale.80
-                            x-transition.scale.origin.top x-transition.opacity.duration.500ms
+                            x-transition.scale.origin.top x-transition.opacity.duration.500ms x-trap="open"
+                            role="dialog" aria-modal="true" aria-labelledby="modal-title"
                             class="fixed inset-0 w-full h-full px-4 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center">
 
                             <div class="w-full max-w-xl mx-auto">
@@ -314,7 +317,7 @@
                                         <img :src="image" alt="Project Cover" width="600" height="350"
                                             class="w-full h-full object-cover opacity-80" x-show="image" loading="lazy"
                                             decoding="async">
-                                        <button @click="open = false"
+                                        <button @click="open = false" aria-label="Close modal"
                                             class="absolute top-4 right-4 p-2 bg-black/50 text-white rounded-full hover:bg-black/70 backdrop-blur-sm transition-all focus:outline-none focus:ring-2 focus:ring-white/30">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20"
                                                 fill="currentColor">
@@ -325,7 +328,8 @@
                                         </button>
                                         <div
                                             class="absolute bottom-0 left-0 w-full p-4 sm:p-6 bg-gradient-to-t from-slate-900 to-transparent">
-                                            <h2 class="text-2xl font-bold text-white tracking-wide drop-shadow-md">
+                                            <h2 id="modal-title"
+                                                class="text-2xl font-bold text-white tracking-wide drop-shadow-md">
                                                 Project Details</h2>
                                         </div>
                                     </div>
@@ -369,11 +373,11 @@
                                                 Close
                                             </button>
                                             <div class="flex-1 flex gap-3">
-                                                <a :href="demo" x-show="demo" target="_blank"
+                                                <a :href="demo" x-show="demo" target="_blank" rel="noopener noreferrer"
                                                     class="flex-1 flex justify-center items-center px-4 py-3 text-sm font-medium text-[#3CCF91] bg-[#3CCF91]/10 hover:bg-[#3CCF91]/20 border border-[#3CCF91]/30 rounded-xl transition-all focus:ring-2 focus:ring-[#3CCF91]/50">
                                                     Live Demo
                                                 </a>
-                                                <a :href="link" x-show="link" target="_blank"
+                                                <a :href="link" x-show="link" target="_blank" rel="noopener noreferrer"
                                                     class="flex-1 flex justify-center items-center px-4 py-3 text-sm font-medium text-white bg-white/10 hover:bg-white/20 border border-white/10 rounded-xl transition-all focus:ring-2 focus:ring-white/30">
                                                     Source Code
                                                 </a>
@@ -392,6 +396,9 @@
     </div>
 
     <script src="assets/main.js"></script>
+    <!-- Alpine.js Plugins -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
+    <!-- Alpine.js Core -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js"></script>
 </body>
 

@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
             loader.classList.add('fade-out');
             setTimeout(() => {
                 loader.classList.add('hide');
-            }, 800);
-        }, 3500);
+            }, 600); // Matches CSS transition duration
+        }, 2500); // Snappier initial reveal
     }
 });
