@@ -61,6 +61,13 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/image/favicon.ico" type="image/x-icon">
 
+    <!-- Resource Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="assets/output.css">
@@ -77,7 +84,8 @@
     <div class="container-COE">
         <main>
             <div class="headerContent">
-                <img src="assets/image/dots.svg" id="dotsImg" alt="Decorative dots background pattern">
+                <img src="assets/image/dots.svg" id="dotsImg" alt="Decorative dots background pattern" width="128"
+                    height="128" fetchpriority="high">
                 <h3 class="heyStat">Hey there!,</h3>
                 <h1 class="admin">I am, <span> Youssef Erremili</span></h1>
                 <article class="descAdmin">
@@ -141,8 +149,9 @@
                     <div class="profile">
                         <div class="about">
                             <div class="relative w-[28%] h-[90%] flex-shrink-0">
-                                <img src="assets/image/admin.webp" alt="Youssef Erremili"
-                                    class="w-full h-full object-cover rounded-3xl outline outline-green-200 border-4 border shadow-md transition-transform duration-300 hover:scale-105">
+                                <img src="assets/image/admin.webp" alt="Youssef Erremili" width="400" height="500"
+                                    class="w-full h-full object-cover rounded-3xl outline outline-green-200 border-4 border shadow-md transition-transform duration-300 hover:scale-105"
+                                    decoding="async">
                             </div>
                             <div class="profile-description">
                                 <h2>youssef erremili</h2>
@@ -254,7 +263,8 @@
 
                                     <div class="w-16 h-16 sm:w-20 sm:h-20 shrink-0 rounded-lg overflow-hidden bg-slate-800 ring-1 ring-white/10 mt-1 cursor-pointer group"
                                         @click='open = true; demo = project.demo; link = project.link; technologies = project.technologies; image = project.image; description = project.description'>
-                                        <img :src="project.image" :alt="project.title"
+                                        <img :src="project.image" :alt="project.title" width="80" height="80"
+                                            loading="lazy" decoding="async"
                                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                                     </div>
 
@@ -301,8 +311,9 @@
                             <div class="w-full max-w-xl mx-auto">
                                 <div class="bg-slate-900 border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
                                     <div class="relative h-48 sm:h-64 w-full bg-slate-800">
-                                        <img :src="image" alt="Project Cover"
-                                            class="w-full h-full object-cover opacity-80" x-show="image">
+                                        <img :src="image" alt="Project Cover" width="600" height="350"
+                                            class="w-full h-full object-cover opacity-80" x-show="image" loading="lazy"
+                                            decoding="async">
                                         <button @click="open = false"
                                             class="absolute top-4 right-4 p-2 bg-black/50 text-white rounded-full hover:bg-black/70 backdrop-blur-sm transition-all focus:outline-none focus:ring-2 focus:ring-white/30">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20"
