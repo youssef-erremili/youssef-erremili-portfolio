@@ -3,7 +3,7 @@
         {
             "title": "Weather website with API",
             "description": "The Weather Website Application is an interactive web platform that provides real-time weather information to users. This application harnesses HTML5, CSS3, and JavaScript technologies to create a user-friendly interface.",
-            "image": "assets/image/weather-project.png",
+            "image": "assets/image/weather-project.webp",
             "technologies": [
                 "HTML5",
                 "CSS3",
@@ -16,7 +16,7 @@
         {
             "title": "Portfolio HTML5 & CSS3",
             "description": "I made a cool portfolio using HTML5 and CSS3. It shows off my work and skills in a neat and stylish way. Check it out to see what I can do.",
-            "image": "assets/image/portfolio-project.png",
+            "image": "assets/image/portfolio-project.webp",
             "technologies": [
                 "HTML5",
                 "CSS3"
@@ -27,7 +27,7 @@
         {
             "title": "Simple portfolio HTML5 & CSS3",
             "description": "I made a cool portfolio using HTML5 and CSS3. It shows off my work and skills in a neat and stylish way. Check it out to see what I can do.",
-            "image": "assets/image/simple-portfolio.png",
+            "image": "assets/image/simple-portfolio.webp",
             "technologies": [
                 "HTML5",
                 "CSS3"
@@ -38,7 +38,7 @@
         {
             "title": "ToDo list with JavaScript",
             "description": "I made a to-do list using HTML, CSS, and JavaScript. You can add, delete, and update tasks easily. It helps you stay organized and manage your tasks smoothly.",
-            "image": "assets/image/todo-project.png",
+            "image": "assets/image/todo-project.webp",
             "technologies": [
                 "HTML5",
                 "CSS3",
@@ -50,7 +50,7 @@
         {
             "title": "Landing page school",
             "description": "I made a cool landing page for school using HTML5 and CSS3. It shows off my work and skills in a neat and stylish way. Check it out to see what I can do.",
-            "image": "assets/image/landing-page.png",
+            "image": "assets/image/landing-page.webp",
             "technologies": [
                 "HTML5",
                 "CSS3"
@@ -61,7 +61,7 @@
         {
             "title": "Sign up form with validation",
             "description": "I designed a signup page using HTML, CSS, and JavaScript with validation. Users can enter their information, and JavaScript ensures that all fields are correctly filled out before submission.",
-            "image": "assets/image/sign-up.png",
+            "image": "assets/image/sign-up.webp",
             "technologies": [
                 "HTML5",
                 "CSS3",
@@ -131,7 +131,7 @@
         {
             "title": "Quotes generator with API",
             "description": "I created a quotes generator using HTML, Tailwind, and an API. The API generates random quotes, and the interface makes it easy to display and interact with them.",
-            "image": "assets/image/quotegenerator.png",
+            "image": "assets/image/quotegenerator.webp",
             "technologies": [
                 "HTML5",
                 "Tailwind",
@@ -145,7 +145,7 @@
         {
             "title": "ErrePress web app",
             "description": "I created a web app using Vue.js, Tailwind CSS, and a API. The app allows users to perform various tasks through a dynamic and responsive interface.",
-            "image": "assets/image/errepress.png",
+            "image": "assets/image/errepress.webp",
             "technologies": [
                 "HTML5",
                 "Tailwind",
@@ -159,7 +159,7 @@
         {
             "title": "Resume builder web app",
             "description": "I created a web app using Vue.js, Tailwind CSS, and a API. The app allows users to perform various tasks through a dynamic and responsive interface.",
-            "image": "assets/image/resume-builder.png",
+            "image": "assets/image/resume-builder.webp",
             "technologies": [
                 "HTML5",
                 "CSS3",
@@ -186,7 +186,7 @@
         {
             "title": "Blog dev",
             "description": "We are working on this project right now we will get you back soon",
-            "image": "assets/image/Blog-dev.png",
+            "image": "assets/image/Blog-dev.webp",
             "technologies": [
                 "Laravel",
                 "Tailwind",
