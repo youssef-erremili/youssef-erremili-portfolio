@@ -30,7 +30,7 @@
         {
             "title": "Blog platform",
             "description": "A simple blog platform built with Laravel, Tailwind CSS, and Alpine.js.",
-            "image": "assets/image/blog-dev.webp",
+            "image": "assets/image/blogdev.webp",
             "technologies": [
                 "Laravel",
                 "Tailwind",
