@@ -1,122 +1,21 @@
 {
     "projects": [
         {
-            "title": "Weather website with API",
-            "description": "The Weather Website Application is an interactive web platform that provides real-time weather information to users. This application harnesses HTML5, CSS3, and JavaScript technologies to create a user-friendly interface.",
-            "image": "assets/image/weather-project.webp",
+            "title": "Background Remover",
+            "description": "I created a web app using Vue.js, Tailwind CSS, and a API. The app allows users to perform various tasks through a dynamic and responsive interface.",
+            "image": "assets/image/image-remover.webp",
             "technologies": [
-                "HTML5",
-                "CSS3",
-                "JavaScript",
-                "API"
+                "Vue.js",
+                "Tailwind",
+                "ClipDrop API"
             ],
-            "link": "https://github.com/youssef-erremili/Weather",
-            "demo": "https://weather-errehub.vercel.app/"
-        },
-        {
-            "title": "Portfolio HTML5 & CSS3",
-            "description": "I made a cool portfolio using HTML5 and CSS3. It shows off my work and skills in a neat and stylish way. Check it out to see what I can do.",
-            "image": "assets/image/portfolio-project.webp",
-            "technologies": [
-                "HTML5",
-                "CSS3"
-            ],
-            "link": "https://github.com/youssef-erremili/modern-portfolio",
-            "demo": "https://youssef-erremili.github.io/modern-portfolio/"
-        },
-        {
-            "title": "Simple portfolio HTML5 & CSS3",
-            "description": "I made a cool portfolio using HTML5 and CSS3. It shows off my work and skills in a neat and stylish way. Check it out to see what I can do.",
-            "image": "assets/image/simple-portfolio.webp",
-            "technologies": [
-                "HTML5",
-                "CSS3"
-            ],
-            "link": "https://github.com/youssef-erremili/Simple-portfolio",
-            "demo": "https://youssef-erremili.github.io/Simple-portfolio/"
-        },
-        {
-            "title": "ToDo list with JavaScript",
-            "description": "I made a to-do list using HTML, CSS, and JavaScript. You can add, delete, and update tasks easily. It helps you stay organized and manage your tasks smoothly.",
-            "image": "assets/image/todo-project.webp",
-            "technologies": [
-                "HTML5",
-                "CSS3",
-                "JavaScript"
-            ],
-            "link": "https://github.com/youssef-erremili/To-Do-list",
-            "demo": "https://youssef-erremili.github.io/To-Do-list/"
-        },
-        {
-            "title": "Landing page school",
-            "description": "I made a cool landing page for school using HTML5 and CSS3. It shows off my work and skills in a neat and stylish way. Check it out to see what I can do.",
-            "image": "assets/image/landing-page.webp",
-            "technologies": [
-                "HTML5",
-                "CSS3"
-            ],
-            "link": "https://github.com/youssef-erremili/solicode-website-project",
-            "demo": "https://youssef-erremili.github.io/solicode-website-project/"
-        },
-        {
-            "title": "Sign up form with validation",
-            "description": "I designed a signup page using HTML, CSS, and JavaScript with validation. Users can enter their information, and JavaScript ensures that all fields are correctly filled out before submission.",
-            "image": "assets/image/sign-up.webp",
-            "technologies": [
-                "HTML5",
-                "CSS3",
-                "JavaScript"
-            ],
-            "link": "https://github.com/youssef-erremili/modern-sign-up-page",
-            "demo": "https://youssef-erremili.github.io/modern-sign-up-page/"
-        },
-        {
-            "title": "Pos system management",
-            "description": "Our POS system combines HTML, CSS, JavaScript, PHP, and MySQL for efficient transaction handling and inventory management. With a user-friendly interface and real-time updates, it streamlines sales and optimizes business operations.",
-            "image": "assets/image/pos-system.webp",
-            "technologies": [
-                "HTML5",
-                "CSS3",
-                "JavaScript",
-                "PHP",
-                "MySQL"
-            ],
-            "link": "https://github.com/youssef-erremili/Pos-system-cafe",
-            "demo": ""
-        },
-        {
-            "title": "Shorten URL Website",
-            "description": "Our Shorten URL website provides an easy way to shorten long URLs. Built with HTML, CSS, JavaScript, PHP, and MySQL, this tool makes URL management more efficient.",
-            "image": "assets/image/shortenURL.webp",
-            "technologies": [
-                "HTML5",
-                "CSS3",
-                "JavaScript",
-                "API",
-                "PHP",
-                "MySQL"
-            ],
-            "link": "https://github.com/youssef-erremili/Shorten-URL",
-            "demo": ""
-        },
-        {
-            "title": "Web translator with API",
-            "description": "I created a web translator using HTML, CSS, JavaScript, PHP, MySQL, and an API. The interface is built with HTML and CSS, JavaScript manages interactions, and PHP connects to the MySQL database. The API handles the translations, making it a fast and user-friendly tool.",
-            "image": "assets/image/web translator.webp",
-            "technologies": [
-                "HTML5",
-                "CSS3",
-                "JavaScript",
-                "API",
-                "Toast Notification"
-            ],
-            "link": null,
-            "demo": ""
+            "link": "https://github.com/youssef-erremili/Remove-background-App",
+            "demo": "https://removebackground.yousseferremili.com/"
         },
         {
             "title": "TempMail Generator",
             "description": "I created a temporary email generator using Vue.js, Tailwind CSS, PHP, and API for efficient email management.",
-            "image": "assets/image/tempmail.png",
+            "image": "assets/image/tempmail.webp",
             "technologies": [
                 "HTML5",
                 "Tailwind",
@@ -126,21 +25,20 @@
                 "PrimeVue"
             ],
             "link": "https://github.com/youssef-erremili/Temp-Email",
-            "demo": "https://temp-email-zeta.vercel.app/"
+            "demo": "https://tempmail.yousseferremili.com/"
         },
         {
-            "title": "Quotes generator with API",
-            "description": "I created a quotes generator using HTML, Tailwind, and an API. The API generates random quotes, and the interface makes it easy to display and interact with them.",
-            "image": "assets/image/quotegenerator.webp",
+            "title": "Blog platform",
+            "description": "A simple blog platform built with Laravel, Tailwind CSS, and Alpine.js.",
+            "image": "assets/image/blog-dev.webp",
             "technologies": [
-                "HTML5",
+                "Laravel",
                 "Tailwind",
-                "JavaScript",
-                "API",
-                "Toast Notification"
+                "laravel-alert",
+                "shtayeb reading time"
             ],
-            "link": "https://github.com/youssef-erremili/Quotes-Generator",
-            "demo": "https://quotes-generator-sooty.vercel.app/"
+            "link": "https://github.com/youssef-erremili/blog-dev-web-app",
+            "demo": ""
         },
         {
             "title": "ErrePress web app",
@@ -181,20 +79,134 @@
                 "PHP"
             ],
             "link": "https://github.com/youssef-erremili/laravel-alert-package/",
-            "demo": "https://github.com/youssef-erremili/laravel-alert-package/"
+            "demo": ""
         },
         {
-            "title": "Blog dev",
-            "description": "We are working on this project right now we will get you back soon",
-            "image": "assets/image/Blog-dev.webp",
+            "title": "Pos system management",
+            "description": "Our POS system combines HTML, CSS, JavaScript, PHP, and MySQL for efficient transaction handling and inventory management. With a user-friendly interface and real-time updates, it streamlines sales and optimizes business operations.",
+            "image": "assets/image/pos-system.webp",
             "technologies": [
-                "Laravel",
-                "Tailwind",
-                "laravel-alert",
-                "shtayeb reading time"
+                "HTML5",
+                "CSS3",
+                "JavaScript",
+                "PHP",
+                "MySQL"
             ],
-            "link": "https://github.com/youssef-erremili/blog-dev-web-app",
+            "link": "https://github.com/youssef-erremili/Pos-system-cafe",
             "demo": ""
+        },
+        {
+            "title": "Shorten URL Website",
+            "description": "Our Shorten URL website provides an easy way to shorten long URLs. Built with HTML, CSS, JavaScript, PHP, and MySQL, this tool makes URL management more efficient.",
+            "image": "assets/image/shortenURL.webp",
+            "technologies": [
+                "HTML5",
+                "CSS3",
+                "JavaScript",
+                "API",
+                "PHP",
+                "MySQL"
+            ],
+            "link": "https://github.com/youssef-erremili/Shorten-URL",
+            "demo": ""
+        },
+        {
+            "title": "Web translator with API",
+            "description": "I created a web translator using HTML, CSS, JavaScript, PHP, MySQL, and an API. The interface is built with HTML and CSS, JavaScript manages interactions, and PHP connects to the MySQL database. The API handles the translations, making it a fast and user-friendly tool.",
+            "image": "assets/image/web-translator.webp",
+            "technologies": [
+                "HTML5",
+                "CSS3",
+                "JavaScript",
+                "API",
+                "Toast Notification"
+            ],
+            "link": null,
+            "demo": ""
+        },
+        {
+            "title": "Weather website with API",
+            "description": "The Weather Website Application is an interactive web platform that provides real-time weather information to users. This application harnesses HTML5, CSS3, and JavaScript technologies to create a user-friendly interface.",
+            "image": "assets/image/weather-project.webp",
+            "technologies": [
+                "HTML5",
+                "CSS3",
+                "JavaScript",
+                "API"
+            ],
+            "link": "https://github.com/youssef-erremili/Weather",
+            "demo": "https://weather.yousseferremili.com/"
+        },
+        {
+            "title": "Quotes generator with API",
+            "description": "I created a quotes generator using HTML, Tailwind, and an API. The API generates random quotes, and the interface makes it easy to display and interact with them.",
+            "image": "assets/image/quotegenerator.webp",
+            "technologies": [
+                "HTML5",
+                "Tailwind",
+                "JavaScript",
+                "API",
+                "Toast Notification"
+            ],
+            "link": "https://github.com/youssef-erremili/Quotes-Generator",
+            "demo": "https://quotesgenerator.yousseferremili.com/"
+        },
+        {
+            "title": "Sign up form with validation",
+            "description": "I designed a signup page using HTML, CSS, and JavaScript with validation. Users can enter their information, and JavaScript ensures that all fields are correctly filled out before submission.",
+            "image": "assets/image/sign-up.webp",
+            "technologies": [
+                "HTML5",
+                "CSS3",
+                "JavaScript"
+            ],
+            "link": "https://github.com/youssef-erremili/modern-sign-up-page",
+            "demo": "https://youssef-erremili.github.io/modern-sign-up-page/"
+        },
+        {
+            "title": "ToDo list with JavaScript",
+            "description": "I made a to-do list using HTML, CSS, and JavaScript. You can add, delete, and update tasks easily. It helps you stay organized and manage your tasks smoothly.",
+            "image": "assets/image/todo-project.webp",
+            "technologies": [
+                "HTML5",
+                "CSS3",
+                "JavaScript"
+            ],
+            "link": "https://github.com/youssef-erremili/To-Do-list",
+            "demo": "https://youssef-erremili.github.io/To-Do-list/"
+        },
+        {
+            "title": "Landing page school",
+            "description": "I made a cool landing page for school using HTML5 and CSS3. It shows off my work and skills in a neat and stylish way. Check it out to see what I can do.",
+            "image": "assets/image/landing-page.webp",
+            "technologies": [
+                "HTML5",
+                "CSS3"
+            ],
+            "link": "https://github.com/youssef-erremili/solicode-website-project",
+            "demo": "https://youssef-erremili.github.io/solicode-website-project/"
+        },
+        {
+            "title": "Portfolio HTML5 & CSS3",
+            "description": "I made a cool portfolio using HTML5 and CSS3. It shows off my work and skills in a neat and stylish way. Check it out to see what I can do.",
+            "image": "assets/image/portfolio-project.webp",
+            "technologies": [
+                "HTML5",
+                "CSS3"
+            ],
+            "link": "https://github.com/youssef-erremili/modern-portfolio",
+            "demo": "https://modernportfolio.yousseferremili.com/"
+        },
+        {
+            "title": "Simple portfolio HTML5 & CSS3",
+            "description": "I made a cool portfolio using HTML5 and CSS3. It shows off my work and skills in a neat and stylish way. Check it out to see what I can do.",
+            "image": "assets/image/simple-portfolio.webp",
+            "technologies": [
+                "HTML5",
+                "CSS3"
+            ],
+            "link": "https://github.com/youssef-erremili/Simple-portfolio",
+            "demo": "https://youssef-erremili.github.io/Simple-portfolio/"
         }
     ]
 }
