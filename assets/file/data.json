@@ -82,6 +82,17 @@
             "demo": ""
         },
         {
+            "title": "Raja club athletic RESTApi",
+            "description": "I created a RESTful API for Raja club using Laravel, PHP, and MySQL. The API provides access to Raja club data including matches, news, and more.",
+            "image": "assets/image/raja-club-athletic.webp",
+            "technologies": [
+                "Laravel",
+                "MySQL"
+            ],
+            "link": "https://github.com/youssef-erremili/Raja-club-Rest-api",
+            "demo": ""
+        },
+        {
             "title": "Pos system management",
             "description": "Our POS system combines HTML, CSS, JavaScript, PHP, and MySQL for efficient transaction handling and inventory management. With a user-friendly interface and real-time updates, it streamlines sales and optimizes business operations.",
             "image": "assets/image/pos-system.webp",
