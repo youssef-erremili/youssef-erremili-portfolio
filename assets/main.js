@@ -1,21 +1,30 @@
 let container = document.getElementsByClassName("projectContainer")
 let project_box = document.querySelector("#projects")
 
+const sharedPortfolioData = {
+    colorClasses: [
+        "bg-blue-500/10 text-blue-400",
+        "bg-green-500/10 text-green-400",
+        "bg-yellow-500/10 text-yellow-400",
+        "bg-red-500/10 text-red-400",
+        "bg-purple-500/10 text-purple-400",
+        "bg-pink-500/10 text-pink-400",
+        "bg-indigo-500/10 text-indigo-400",
+        "bg-cyan-500/10 text-cyan-400",
+        "bg-orange-500/10 text-orange-400",
+        "bg-teal-500/10 text-teal-400"
+    ],
+    getColorClass(tech) {
+        let hash = 0;
+        for (let c = 0; c < tech.length; c++) hash += tech.charCodeAt(c);
+        return this.colorClasses[hash % this.colorClasses.length];
+    }
+};
+
 document.addEventListener('alpine:init', () => {
     Alpine.data('portfolio', () => ({
         projects: [],
-        colorClasses: [
-            "bg-blue-500/10 text-blue-400",
-            "bg-green-500/10 text-green-400",
-            "bg-yellow-500/10 text-yellow-400",
-            "bg-red-500/10 text-red-400",
-            "bg-purple-500/10 text-purple-400",
-            "bg-pink-500/10 text-pink-400",
-            "bg-indigo-500/10 text-indigo-400",
-            "bg-cyan-500/10 text-cyan-400",
-            "bg-orange-500/10 text-orange-400",
-            "bg-teal-500/10 text-teal-400"
-        ],
+        ...sharedPortfolioData,
         init() {
             fetch('assets/file/data.json')
                 .then(response => response.json())
@@ -23,29 +32,13 @@ document.addEventListener('alpine:init', () => {
                     this.projects = data.projects;
                 })
                 .catch(error => console.error("Error loading projects:", error));
-        },
-        getColorClass(tech) {
-            let hash = 0;
-            for (let c = 0; c < tech.length; c++) hash += tech.charCodeAt(c);
-            return this.colorClasses[hash % this.colorClasses.length];
         }
     }));
 
     Alpine.data('projectDetail', () => ({
         project: null,
         loading: true,
-        colorClasses: [
-            "bg-blue-500/10 text-blue-400",
-            "bg-green-500/10 text-green-400",
-            "bg-yellow-500/10 text-yellow-400",
-            "bg-red-500/10 text-red-400",
-            "bg-purple-500/10 text-purple-400",
-            "bg-pink-500/10 text-pink-400",
-            "bg-indigo-500/10 text-indigo-400",
-            "bg-cyan-500/10 text-cyan-400",
-            "bg-orange-500/10 text-orange-400",
-            "bg-teal-500/10 text-teal-400"
-        ],
+        ...sharedPortfolioData,
         init() {
             const urlParams = new URLSearchParams(window.location.search);
             const id = urlParams.get('id');
@@ -55,7 +48,7 @@ document.addEventListener('alpine:init', () => {
                     .then(data => {
                         this.project = data.projects[id];
                         this.loading = false;
-                        if(this.project && this.project.title) {
+                        if (this.project && this.project.title) {
                             document.title = this.project.title + " - Youssef Erremili";
                         }
                     })
@@ -63,11 +56,6 @@ document.addEventListener('alpine:init', () => {
             } else {
                 this.loading = false;
             }
-        },
-        getColorClass(tech) {
-            let hash = 0;
-            for (let c = 0; c < tech.length; c++) hash += tech.charCodeAt(c);
-            return this.colorClasses[hash % this.colorClasses.length];
         }
     }));
 });

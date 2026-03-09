@@ -2,8 +2,8 @@
   "name": "youssef-erremili-portfolio",
   "version": "1.0.0",
   "scripts": {
-    "build:css": "tailwindcss -i ./assets/input.css -o ./assets/output.css --minify",
-    "watch:css": "tailwindcss -i ./assets/input.css -o ./assets/output.css --watch"
+    "build:css": "tailwindcss -i ./assets/style/input.css -o ./assets/style/output.css --minify",
+    "watch:css": "tailwindcss -i ./assets/style/input.css -o ./assets/style/output.css --watch"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.17"
