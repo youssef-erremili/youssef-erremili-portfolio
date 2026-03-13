@@ -22,6 +22,9 @@ module.exports = {
       fontFamily: {
         mono: ['"JetBrains Mono"', 'monospace'],
       },
+      animation: {
+        'spin-custom': 'spin 1s cubic-bezier(.4, 0, .2, 1) infinite',
+      }
     },
   },
   plugins: [],

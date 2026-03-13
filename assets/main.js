@@ -65,10 +65,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const loader = document.querySelector('#loader');
     if (loader) {
         setTimeout(() => {
-            loader.classList.add('fade-out');
+            loader.classList.add('opacity-0', 'invisible', 'pointer-events-none');
             setTimeout(() => {
-                loader.classList.add('hide');
-            }, 600); // Matches CSS transition duration
-        }, 2500); // Snappier initial reveal
+                loader.classList.add('hidden');
+            }, 500);
+        }, 1500);
     }
 });

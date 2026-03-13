@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -72,29 +72,28 @@
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="assets/style/style.css">
     <link rel="stylesheet" href="assets/style/output.css">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
         rel="stylesheet">
 </head>
 
-<body class="bg-shade-blue font-mono min-h-screen pb-8 w-full">
+<body class="bg-shade-blue font-mono min-h-screen pb-8 w-full [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-shade-blue [&::-webkit-scrollbar-thumb]:bg-slate-700 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-slate-600">
 
     <!-- Loader -->
-    <div class="loader-container fixed inset-0 w-full h-screen z-[9999] flex items-center justify-center flex-col text-center
+    <div class="fixed inset-0 w-full h-screen z-[9999] flex items-center justify-center flex-col text-center
                 transition-[opacity,visibility] duration-[600ms] [transition-timing-function:cubic-bezier(.65,0,.35,1)]
                 bg-shade-blue will-change-[opacity]" id="loader" aria-hidden="true">
         <h1 class="font-bold text-[2.5rem] capitalize text-site-green">youssef erremili</h1>
         <h1 class="font-bold text-[2.5rem] capitalize text-site-gray">full-stack developer</h1>
-        <div class="loader"></div>
+        <div class="w-12 h-12 border-[3px] border-site-green/10 rounded-full inline-block relative mt-5 animate-spin-custom will-change-transform after:content-[''] after:absolute after:left-0 after:top-0 after:bg-site-green after:w-[10px] after:h-[10px] after:-translate-x-1/2 after:translate-y-1/2 after:rounded-full"></div>
     </div>
 
-    <div class="container-COE">
+    <div class="w-[90%] max-w-[1400px] min-h-inherit mx-auto">
         <main class="mt-8 w-full">
 
             <!-- Hero Header -->
-            <div class="headerContent relative pt-8 pb-0 pl-12">
-                <img src="assets/image/icons/dots.svg" id="dotsImg" alt="dots icon" aria-hidden="true" width="128"
+            <div class="relative pt-8 pb-0 px-6 text-balance md:pl-12 md:text-left">
+                <img src="assets/image/icons/dots.svg" id="dotsImg" class="w-32 absolute top-0 left-0 -z-10" alt="dots icon" aria-hidden="true" width="128"
                     height="128" fetchpriority="high">
                 <h3 class="text-site-green text-[1.8rem]">Hey there!,</h3>
                 <h1 class="admin text-[clamp(3.6rem,8vw,5rem)] text-site-white font-semibold leading-[1.1] my-2">I am,
@@ -102,7 +101,7 @@
                 </h1>
                 <article class="text-site-white-sm text-[clamp(1.2rem,4vw,2.4rem)] inline-block max-w-[800px]">
                     <span class="text-site-green font-bold">Full Stack Developer.</span>
-                    A self-taught developer with an interest in Web Development.
+                    <span class="text-site-white-sm">A self-taught developer with an interest in Web Development.</span>
                 </article>
             </div>
 
@@ -422,12 +421,12 @@
                             <a href="https://linkedin.com/in/youssef-erremili-100070296" target="_blank"
                                 rel="noopener noreferrer"
                                 class="group flex w-full lg:w-[70%] items-center justify-center gap-2 py-4 px-5 rounded-2xl bg-tech-blue border border-white/5 text-site-gray font-semibold text-base transition-all duration-300 hover:scale-[1.03] shadow-[0_0_40px_-10px_rgba(60,207,145,0.4)]">
-                                <svg class="w-4 h-4 shrink-0 text-desc-gray group-hover:text-white transition-colors"
+                                <svg class="w-4 h-4 shrink-0 text-white transition-colors"
                                     fill="currentColor" viewBox="0 0 24 24">
                                     <path
                                         d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                                 </svg>
-                                <span class="group-hover:text-white transition-colors whitespace-nowrap">Connect on
+                                <span class="text-white transition-colors whitespace-nowrap">Connect on
                                     LinkedIn</span>
                             </a>
                         </div>
@@ -436,7 +435,7 @@
             </div>
 
         </main>
-        <footer class="mt-16 mb-5 border-t border-white/5 pt-6">
+        <footer class="mt-16 mb-5 border-t border-white/5 pt-6 w-full max-[500px]:[&_p_strong]:block max-[500px]:[&_p_strong]:mt-2">
             <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
                 <!-- Left: Name -->
                 <p class="text-[.9rem] font-medium text-site-gray text-center sm:text-left">
