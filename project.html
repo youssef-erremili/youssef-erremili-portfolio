@@ -23,8 +23,17 @@
         <main class="py-12 md:py-20 px-4 max-w-5xl mx-auto min-h-[85vh] flex flex-col justify-center w-full">
 
             <div x-show="loading" class="flex justify-center items-center py-20">
-                <div
-                    class="w-12 h-12 border-[3px] border-site-green/10 rounded-full inline-block relative mt-5 animate-spin-custom will-change-transform after:content-[''] after:absolute after:left-0 after:top-0 after:bg-site-green after:w-[10px] after:h-[10px] after:-translate-x-1/2 after:translate-y-1/2 after:rounded-full">
+                <div class="px-8 py-4 rounded-2xl">
+                    <div class="text-site-gray font-mono font-medium text-[25px] box-content h-[40px] px-2.5 flex">
+                        <p>loading</p>
+                        <div class="overflow-hidden h-full relative after:content-[''] after:absolute after:inset-0 after:bg-[linear-gradient(#000f19_10%,transparent_30%,transparent_70%,#000f19_90%)] after:z-20">
+                            <span class="block h-full pl-[6px] text-site-green animate-spin-words">content</span>
+                            <span class="block h-full pl-[6px] text-site-green animate-spin-words">data</span>
+                            <span class="block h-full pl-[6px] text-site-green animate-spin-words">projects</span>
+                            <span class="block h-full pl-[6px] text-site-green animate-spin-words">images</span>
+                            <span class="block h-full pl-[6px] text-site-green animate-spin-words">content</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
