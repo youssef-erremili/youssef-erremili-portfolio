@@ -61,14 +61,26 @@ document.addEventListener('alpine:init', () => {
 });
 
 
+// Prevent loader flash on subsequent page loads in the same session
+if (sessionStorage.getItem('loader_shown') === 'true') {
+    const style = document.createElement('style');
+    style.innerHTML = '#loader { display: none !important; opacity: 0 !important; visibility: hidden !important; }';
+    document.head.appendChild(style);
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     const loader = document.querySelector('#loader');
     if (loader) {
-        setTimeout(() => {
-            loader.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+        if (sessionStorage.getItem('loader_shown') !== 'true') {
             setTimeout(() => {
-                loader.classList.add('hidden');
-            }, 500);
-        }, 1500);
+                loader.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+                setTimeout(() => {
+                    loader.classList.add('hidden');
+                }, 600);
+                sessionStorage.setItem('loader_shown', 'true');
+            }, 3500);
+        } else {
+            loader.classList.add('opacity-0', 'invisible', 'pointer-events-none', 'hidden');
+        }
     }
 });

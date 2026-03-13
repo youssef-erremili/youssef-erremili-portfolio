@@ -80,12 +80,21 @@
 <body class="bg-shade-blue font-mono min-h-screen pb-8 w-full [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-shade-blue [&::-webkit-scrollbar-thumb]:bg-slate-700 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-slate-600">
 
     <!-- Loader -->
-    <div class="fixed inset-0 w-full h-screen z-[9999] flex items-center justify-center flex-col text-center
+    <div class="fixed inset-0 z-[9999] flex items-center justify-center flex-col
                 transition-[opacity,visibility] duration-[600ms] [transition-timing-function:cubic-bezier(.65,0,.35,1)]
                 bg-shade-blue will-change-[opacity]" id="loader" aria-hidden="true">
-        <h1 class="font-bold text-[2.5rem] capitalize text-site-green">youssef erremili</h1>
-        <h1 class="font-bold text-[2.5rem] capitalize text-site-gray">full-stack developer</h1>
-        <div class="w-12 h-12 border-[3px] border-site-green/10 rounded-full inline-block relative mt-5 animate-spin-custom will-change-transform after:content-[''] after:absolute after:left-0 after:top-0 after:bg-site-green after:w-[10px] after:h-[10px] after:-translate-x-1/2 after:translate-y-1/2 after:rounded-full"></div>
+        <div class="px-8 py-4 rounded-2xl mt-2">
+            <div class="text-site-gray capitalize font-mono font-medium text-[25px] box-content h-[40px] px-2.5 flex">
+                <p>Loading</p>
+                <div class="overflow-hidden h-full relative after:content-[''] after:absolute after:inset-0 after:bg-[linear-gradient(#000f19_10%,transparent_30%,transparent_70%,#000f19_90%)] after:z-20">
+                    <span class="block h-full pl-[6px] text-site-green animate-spin-words">content</span>
+                    <span class="block h-full pl-[6px] text-site-green animate-spin-words">components</span>
+                    <span class="block h-full pl-[6px] text-site-green animate-spin-words">projects</span>
+                    <span class="block h-full pl-[6px] text-site-green animate-spin-words">blocks</span>
+                    <span class="block h-full pl-[6px] text-site-green animate-spin-words">content</span>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="w-[90%] max-w-[1400px] min-h-inherit mx-auto">

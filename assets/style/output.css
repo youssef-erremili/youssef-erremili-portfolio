@@ -741,12 +741,16 @@ video {
   margin-top: 4rem;
 }
 
-.mt-5 {
-  margin-top: 1.25rem;
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.box-content {
+  box-sizing: content-box;
 }
 
 .block {
@@ -813,12 +817,12 @@ video {
   height: 2.25rem;
 }
 
-.h-full {
-  height: 100%;
+.h-\[40px\] {
+  height: 40px;
 }
 
-.h-screen {
-  height: 100vh;
+.h-full {
+  height: 100%;
 }
 
 .max-h-\[85\%\] {
@@ -923,14 +927,46 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@keyframes spin-words {
+  10% {
+    transform: translateY(-102%);
+  }
+
+  25% {
+    transform: translateY(-100%);
+  }
+
+  35% {
+    transform: translateY(-202%);
+  }
+
+  50% {
+    transform: translateY(-200%);
+  }
+
+  60% {
+    transform: translateY(-302%);
+  }
+
+  75% {
+    transform: translateY(-300%);
+  }
+
+  85% {
+    transform: translateY(-402%);
+  }
+
+  100% {
+    transform: translateY(-400%);
   }
 }
 
-.animate-spin-custom {
-  animation: spin 1s cubic-bezier(.4, 0, .2, 1) infinite;
+.animate-spin-words {
+  animation: spin-words 4s infinite;
 }
 
 .cursor-pointer {
@@ -1051,6 +1087,10 @@ video {
   white-space: nowrap;
 }
 
+.text-balance {
+  text-wrap: balance;
+}
+
 .rounded-2xl {
   border-radius: 1rem;
 }
@@ -1091,10 +1131,6 @@ video {
   border-width: 4px;
 }
 
-.border-\[3px\] {
-  border-width: 3px;
-}
-
 .border-b {
   border-bottom-width: 1px;
 }
@@ -1122,10 +1158,6 @@ video {
 .border-site-green {
   --tw-border-opacity: 1;
   border-color: rgb(60 207 145 / var(--tw-border-opacity, 1));
-}
-
-.border-site-green\/10 {
-  border-color: rgb(60 207 145 / 0.1);
 }
 
 .border-site-green\/20 {
@@ -1298,6 +1330,11 @@ video {
   padding-right: 0.5rem;
 }
 
+.px-2\.5 {
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1390,6 +1427,10 @@ video {
   padding-bottom: 2rem;
 }
 
+.pl-\[6px\] {
+  padding-left: 6px;
+}
+
 .pt-4 {
   padding-top: 1rem;
 }
@@ -1462,6 +1503,10 @@ video {
 
 .text-\[2\.5rem\] {
   font-size: 2.5rem;
+}
+
+.text-\[25px\] {
+  font-size: 25px;
 }
 
 .text-\[clamp\(1\.2rem\2c 4vw\2c 2\.4rem\)\] {
@@ -1793,10 +1838,6 @@ video {
   will-change: opacity;
 }
 
-.will-change-transform {
-  will-change: transform;
-}
-
 .\[transition-timing-function\:cubic-bezier\(\.65\2c 0\2c \.35\2c 1\)\] {
   transition-timing-function: cubic-bezier(.65,0,.35,1);
 }
@@ -1806,47 +1847,19 @@ video {
   position: absolute;
 }
 
-.after\:left-0::after {
+.after\:inset-0::after {
   content: var(--tw-content);
-  left: 0px;
+  inset: 0px;
 }
 
-.after\:top-0::after {
+.after\:z-20::after {
   content: var(--tw-content);
-  top: 0px;
+  z-index: 20;
 }
 
-.after\:h-\[10px\]::after {
+.after\:bg-\[linear-gradient\(\#000f19_10\%\2c transparent_30\%\2c transparent_70\%\2c \#000f19_90\%\)\]::after {
   content: var(--tw-content);
-  height: 10px;
-}
-
-.after\:w-\[10px\]::after {
-  content: var(--tw-content);
-  width: 10px;
-}
-
-.after\:-translate-x-1\/2::after {
-  content: var(--tw-content);
-  --tw-translate-x: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.after\:translate-y-1\/2::after {
-  content: var(--tw-content);
-  --tw-translate-y: 50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.after\:rounded-full::after {
-  content: var(--tw-content);
-  border-radius: 9999px;
-}
-
-.after\:bg-site-green::after {
-  content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: rgb(60 207 145 / var(--tw-bg-opacity, 1));
+  background-image: linear-gradient(#000f19 10%,transparent 30%,transparent 70%,#000f19 90%);
 }
 
 .after\:content-\[\'\'\]::after {
