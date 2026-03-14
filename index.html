@@ -65,35 +65,40 @@
     <link rel="shortcut icon" href="assets/image/icons/favicon.ico" type="image/x-icon">
 
     <!-- Resource Hints -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://unpkg.com">
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/style/output.css">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="assets/style/fonts.css">
 </head>
 
-<body class="bg-shade-blue font-mono min-h-screen pb-8 w-full [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-shade-blue [&::-webkit-scrollbar-thumb]:bg-slate-700 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-slate-600">
+<body
+    class="bg-shade-blue font-mono min-h-screen pb-8 w-full [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-shade-blue [&::-webkit-scrollbar-thumb]:bg-slate-700 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-slate-600">
 
     <!-- Loader -->
     <div class="fixed inset-0 z-[9999] flex items-center justify-center flex-col
                 transition-[opacity,visibility] duration-[600ms] [transition-timing-function:cubic-bezier(.65,0,.35,1)]
                 bg-shade-blue will-change-[opacity]" id="loader" aria-hidden="true">
-        <div class="px-8 py-4 rounded-2xl mt-2">
-            <div class="text-site-gray capitalize font-mono font-medium text-[25px] box-content h-[40px] px-2.5 flex">
-                <p>Loading</p>
-                <div class="overflow-hidden h-full relative after:content-[''] after:absolute after:inset-0 after:bg-[linear-gradient(#000f19_10%,transparent_30%,transparent_70%,#000f19_90%)] after:z-20">
-                    <span class="block h-full pl-[6px] text-site-green animate-spin-words">content</span>
-                    <span class="block h-full pl-[6px] text-site-green animate-spin-words">components</span>
-                    <span class="block h-full pl-[6px] text-site-green animate-spin-words">projects</span>
-                    <span class="block h-full pl-[6px] text-site-green animate-spin-words">blocks</span>
-                    <span class="block h-full pl-[6px] text-site-green animate-spin-words">content</span>
-                </div>
-            </div>
+        <div class="relative w-[72px] h-[72px]">
+            <div class="absolute w-5 h-5 rounded-md bg-site-green opacity-70 animate-[moveBox1_4s_infinite] [transform:rotate(45deg)]"
+                style="left: 0; top: 0; margin-left: 26px;"></div>
+            <div class="absolute w-5 h-5 rounded-md bg-site-green opacity-70 animate-[moveBox2_4s_infinite] [transform:rotate(45deg)]"
+                style="left: 26px; top: 0;"></div>
+            <div class="absolute w-5 h-5 rounded-md bg-site-green opacity-70 animate-[moveBox3_4s_infinite] [transform:rotate(45deg)]"
+                style="left: 52px; top: 0; margin-top: 52px;"></div>
+            <div class="absolute w-5 h-5 rounded-md bg-site-green opacity-70 animate-[moveBox4_4s_infinite] [transform:rotate(45deg)]"
+                style="left: 0; top: 26px; margin-left: 26px;"></div>
+            <div class="absolute w-5 h-5 rounded-md bg-site-green opacity-70 animate-[moveBox5_4s_infinite] [transform:rotate(45deg)]"
+                style="left: 26px; top: 26px;"></div>
+            <div class="absolute w-5 h-5 rounded-md bg-site-green opacity-70 animate-[moveBox6_4s_infinite] [transform:rotate(45deg)]"
+                style="left: 52px; top: 26px;"></div>
+            <div class="absolute w-5 h-5 rounded-md bg-site-green opacity-70 animate-[moveBox7_4s_infinite] [transform:rotate(45deg)]"
+                style="left: 0; top: 52px;"></div>
+            <div class="absolute w-5 h-5 rounded-md bg-site-green opacity-70 animate-[moveBox8_4s_infinite] [transform:rotate(45deg)]"
+                style="left: 26px; top: 52px;"></div>
+            <div class="absolute w-5 h-5 rounded-md bg-site-green opacity-70 animate-[moveBox9_4s_infinite] [transform:rotate(45deg)]"
+                style="left: 52px; top: 52px;"></div>
         </div>
     </div>
 
@@ -102,8 +107,8 @@
 
             <!-- Hero Header -->
             <div class="relative pt-8 pb-0 px-6 text-balance md:pl-12 md:text-left">
-                <img src="assets/image/icons/dots.svg" id="dotsImg" class="w-32 absolute top-0 left-0 -z-10" alt="dots icon" aria-hidden="true" width="128"
-                    height="128" fetchpriority="high">
+                <img src="assets/image/icons/dots.svg" id="dotsImg" class="w-32 absolute top-0 left-0 -z-10" alt=""
+                    aria-hidden="true" width="128" height="128" fetchpriority="high">
                 <h3 class="text-site-green text-[1.8rem]">Hey there!,</h3>
                 <h1 class="admin text-[clamp(3.6rem,8vw,5rem)] text-site-white font-semibold leading-[1.1] my-2">I am,
                     <span class="text-site-green font-extrabold"> Youssef Erremili</span>
@@ -126,21 +131,21 @@
                 </a>
                 <a href="https://github.com/youssef-erremili" target="_blank" rel="noopener noreferrer"
                     class="group flex items-center bg-white/[0.03] backdrop-blur-sm border border-white/10 text-site-white-sm font-semibold text-[.85rem] sm:text-[.9rem] px-5 sm:px-6 py-[.6rem] sm:py-[.7rem] rounded-xl transition-all duration-300 hover:bg-site-green/10 hover:border-site-green/30 hover:-translate-y-1 whitespace-nowrap"
-                    aria-label="Visit Youssef Erremili's GitHub profile (opens in new tab)">
+                    aria-label="GitHub">
                     <img src="assets/image/icons/github.svg" class="w-4 h-4 sm:w-[1.1rem] sm:h-[1.1rem] mr-2" alt=""
                         aria-hidden="true">
                     Github
                 </a>
                 <a href="https://linkedin.com/in/youssef-erremili-100070296" target="_blank" rel="noopener noreferrer"
                     class="group flex items-center bg-white/[0.03] backdrop-blur-sm border border-white/10 text-site-white-sm font-semibold text-[.85rem] sm:text-[.9rem] px-5 sm:px-6 py-[.6rem] sm:py-[.7rem] rounded-xl transition-all duration-300 hover:bg-site-green/10 hover:border-site-green/30 hover:-translate-y-1 whitespace-nowrap"
-                    aria-label="Visit Youssef Erremili's LinkedIn profile (opens in new tab)">
+                    aria-label="LinkedIn">
                     <img src="assets/image/icons/linkedin.svg" class="w-4 h-4 sm:w-[1.1rem] sm:h-[1.1rem] mr-2" alt=""
                         aria-hidden="true">
                     LinkedIn
                 </a>
                 <a href="mailto:yousseferremili.dev@gmail.com"
                     class="group flex items-center bg-white/[0.03] backdrop-blur-sm border border-white/10 text-site-white-sm font-semibold text-[.85rem] sm:text-[.9rem] px-5 sm:px-6 py-[.6rem] sm:py-[.7rem] rounded-xl transition-all duration-300 hover:bg-site-green/10 hover:border-site-green/30 hover:-translate-y-1 whitespace-nowrap"
-                    aria-label="Send an email to Youssef Erremili">
+                    aria-label="Email">
                     <img src="assets/image/icons/email.svg" class="w-4 h-4 sm:w-[1.1rem] sm:h-[1.1rem] mr-2" alt=""
                         aria-hidden="true">
                     Email
@@ -308,7 +313,7 @@
                         </p>
                     </div>
                     <div class="projectContainer">
-                        <ul id="projects" role="list"
+                        <ul id="projects"
                             class="!grid !grid-cols-1 md:!grid-cols-2 lg:!grid-cols-3 gap-8 gap-y-12 py-10 w-full">
                             <template x-for="(project, index) in projects" :key="index">
                                 <li
@@ -316,10 +321,10 @@
                                     <div class="text-4xl lg:text-5xl font-extrabold text-white/10 select-none hidden sm:block"
                                         aria-hidden="true" x-text="String(index + 1).padStart(2, '0')"></div>
 
-                                    <a :href="`project.html?id=${index}`"
+                                    <a :href="`project.html?id=${index}`" aria-hidden="true" tabindex="-1"
                                         class="block w-16 h-16 sm:w-20 sm:h-20 shrink-0 rounded-lg overflow-hidden bg-slate-800 ring-1 ring-white/10 mt-1 cursor-pointer group">
-                                        <img :src="project.image" :alt="project.title" width="80" height="80"
-                                            loading="lazy" decoding="async"
+                                        <img :src="project.image" alt="" width="80" height="80" loading="lazy"
+                                            decoding="async"
                                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                                     </a>
 
@@ -338,6 +343,7 @@
                                         <a :href="`project.html?id=${index}`"
                                             class="block font-bold capitalize text-white text-[15px] leading-snug hover:text-site-green cursor-pointer transition-colors max-w-[90%]"
                                             x-text="project.title">
+                                            Project
                                         </a>
 
                                         <div class="flex flex-wrap items-center gap-1.5 mt-1">
@@ -414,7 +420,7 @@
 
                         <!-- CTA Buttons -->
                         <div class="flex flex-row lg:flex-col flex-wrap gap-4 w-full justify-center lg:justify-start">
-                            <a href="mailto:yousseferremili.dev@gmail.com"
+                            <a href="mailto:yousseferremili.dev@gmail.com" aria-label="Email"
                                 class="group relative flex w-full lg:w-[70%] items-center justify-center gap-2 py-4 px-5 rounded-2xl bg-site-green text-shade-blue font-bold text-base overflow-hidden transition-all duration-300 hover:scale-[1.03] shadow-[0_0_40px_-10px_rgba(60,207,145,0.4)]">
                                 <div
                                     class="absolute inset-0 w-full h-full bg-white/30 -translate-x-[120%] skew-x-12 group-hover:translate-x-[120%] transition-transform duration-700 ease-in-out">
@@ -428,10 +434,10 @@
                             </a>
 
                             <a href="https://linkedin.com/in/youssef-erremili-100070296" target="_blank"
-                                rel="noopener noreferrer"
+                                rel="noopener noreferrer" aria-label="LinkedIn"
                                 class="group flex w-full lg:w-[70%] items-center justify-center gap-2 py-4 px-5 rounded-2xl bg-tech-blue border border-white/5 text-site-gray font-semibold text-base transition-all duration-300 hover:scale-[1.03] shadow-[0_0_40px_-10px_rgba(60,207,145,0.4)]">
-                                <svg class="w-4 h-4 shrink-0 text-white transition-colors"
-                                    fill="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-4 h-4 shrink-0 text-white transition-colors" fill="currentColor"
+                                    viewBox="0 0 24 24">
                                     <path
                                         d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                                 </svg>
@@ -444,7 +450,8 @@
             </div>
 
         </main>
-        <footer class="mt-16 mb-5 border-t border-white/5 pt-6 w-full max-[500px]:[&_p_strong]:block max-[500px]:[&_p_strong]:mt-2">
+        <footer
+            class="mt-16 mb-5 border-t border-white/5 pt-6 w-full max-[500px]:[&_p_strong]:block max-[500px]:[&_p_strong]:mt-2">
             <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
                 <!-- Left: Name -->
                 <p class="text-[.9rem] font-medium text-site-gray text-center sm:text-left">
