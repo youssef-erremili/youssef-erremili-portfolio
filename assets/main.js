@@ -78,17 +78,24 @@ if (sessionStorage.getItem('loader_shown') === 'true') {
 
 document.addEventListener("DOMContentLoaded", function () {
     const loader = document.querySelector('#loader');
-    if (loader) {
-        if (sessionStorage.getItem('loader_shown') !== 'true') {
-            setTimeout(() => {
-                loader.classList.add('opacity-0', 'invisible', 'pointer-events-none');
-                setTimeout(() => {
-                    loader.classList.add('hidden');
-                }, 600);
-                sessionStorage.setItem('loader_shown', 'true');
-            }, 3500);
-        } else {
-            loader.classList.add('opacity-0', 'invisible', 'pointer-events-none', 'hidden');
-        }
+    if (!loader) return;
+
+    if (sessionStorage.getItem('loader_shown') === 'true') {
+        loader.classList.add('opacity-0', 'invisible', 'pointer-events-none', 'hidden');
+        return;
+    }
+
+    function hideLoader() {
+        loader.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+        setTimeout(() => {
+            loader.classList.add('hidden');
+        }, 600);
+        sessionStorage.setItem('loader_shown', 'true');
+    }
+
+    if (document.readyState === 'complete') {
+        setTimeout(hideLoader, 300);
+    } else {
+        window.addEventListener('load', () => setTimeout(hideLoader, 300), { once: true });
     }
 });
