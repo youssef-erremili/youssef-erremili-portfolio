@@ -24,14 +24,19 @@ const sharedPortfolioData = {
 document.addEventListener('alpine:init', () => {
     Alpine.data('portfolio', () => ({
         projects: [],
+        loading: true,
         ...sharedPortfolioData,
         init() {
             fetch('assets/file/data.json')
                 .then(response => response.json())
                 .then(data => {
                     this.projects = data.projects;
+                    this.loading = false;
                 })
-                .catch(error => console.error("Error loading projects:", error));
+                .catch(error => {
+                    console.error("Error loading projects:", error);
+                    this.loading = false;
+                });
         }
     }));
 
@@ -41,18 +46,21 @@ document.addEventListener('alpine:init', () => {
         ...sharedPortfolioData,
         init() {
             const urlParams = new URLSearchParams(window.location.search);
-            const id = urlParams.get('id');
-            if (id !== null) {
+            const slug = urlParams.get('id');
+            if (slug !== null) {
                 fetch('assets/file/data.json')
                     .then(response => response.json())
                     .then(data => {
-                        this.project = data.projects[id];
+                        this.project = data.projects.find(p => p.slug === slug);
                         this.loading = false;
                         if (this.project && this.project.title) {
                             document.title = this.project.title + " - Youssef Erremili";
                         }
                     })
-                    .catch(error => console.error("Error loading project:", error));
+                    .catch(error => {
+                        console.error("Error loading project:", error);
+                        this.loading = false;
+                    });
             } else {
                 this.loading = false;
             }
