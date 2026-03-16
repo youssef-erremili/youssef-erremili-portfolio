@@ -4,8 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'shade-blue': '#000f19',
-        'site-white': '#ffffff',
+        'shade-blue': '#0f0e1a',
         'site-white-sm': '#fefefe',
         'site-green': '#3CCF91',
         'light-green': '#9ae6b4',
@@ -24,6 +23,8 @@ module.exports = {
       },
       animation: {
         'spin-custom': 'spin 1s cubic-bezier(.4, 0, .2, 1) infinite',
+        'spin-slow': 'spin 8s linear infinite',
+        'circle-rotate': 'circleRotate 8s linear infinite',
         'moveBox1': 'moveBox1 4s infinite',
         'moveBox2': 'moveBox2 4s infinite',
         'moveBox3': 'moveBox3 4s infinite',
@@ -35,6 +36,10 @@ module.exports = {
         'moveBox9': 'moveBox9 4s infinite',
       },
       keyframes: {
+        circleRotate: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
         moveBox1: {
           '9.0909090909%': { transform: 'translate(-26px, 0)' },
           '18.1818181818%': { transform: 'translate(0px, 0)' },

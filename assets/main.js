@@ -24,14 +24,19 @@ const sharedPortfolioData = {
 document.addEventListener('alpine:init', () => {
     Alpine.data('portfolio', () => ({
         projects: [],
+        loading: true,
         ...sharedPortfolioData,
         init() {
             fetch('assets/file/data.json')
                 .then(response => response.json())
                 .then(data => {
                     this.projects = data.projects;
+                    this.loading = false;
                 })
-                .catch(error => console.error("Error loading projects:", error));
+                .catch(error => {
+                    console.error("Error loading projects:", error);
+                    this.loading = false;
+                });
         }
     }));
 
@@ -41,18 +46,21 @@ document.addEventListener('alpine:init', () => {
         ...sharedPortfolioData,
         init() {
             const urlParams = new URLSearchParams(window.location.search);
-            const id = urlParams.get('id');
-            if (id !== null) {
+            const slug = urlParams.get('id');
+            if (slug !== null) {
                 fetch('assets/file/data.json')
                     .then(response => response.json())
                     .then(data => {
-                        this.project = data.projects[id];
+                        this.project = data.projects.find(p => p.slug === slug);
                         this.loading = false;
                         if (this.project && this.project.title) {
                             document.title = this.project.title + " - Youssef Erremili";
                         }
                     })
-                    .catch(error => console.error("Error loading project:", error));
+                    .catch(error => {
+                        console.error("Error loading project:", error);
+                        this.loading = false;
+                    });
             } else {
                 this.loading = false;
             }
@@ -70,17 +78,24 @@ if (sessionStorage.getItem('loader_shown') === 'true') {
 
 document.addEventListener("DOMContentLoaded", function () {
     const loader = document.querySelector('#loader');
-    if (loader) {
-        if (sessionStorage.getItem('loader_shown') !== 'true') {
-            setTimeout(() => {
-                loader.classList.add('opacity-0', 'invisible', 'pointer-events-none');
-                setTimeout(() => {
-                    loader.classList.add('hidden');
-                }, 600);
-                sessionStorage.setItem('loader_shown', 'true');
-            }, 3500);
-        } else {
-            loader.classList.add('opacity-0', 'invisible', 'pointer-events-none', 'hidden');
-        }
+    if (!loader) return;
+
+    if (sessionStorage.getItem('loader_shown') === 'true') {
+        loader.classList.add('opacity-0', 'invisible', 'pointer-events-none', 'hidden');
+        return;
+    }
+
+    function hideLoader() {
+        loader.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+        setTimeout(() => {
+            loader.classList.add('hidden');
+        }, 600);
+        sessionStorage.setItem('loader_shown', 'true');
+    }
+
+    if (document.readyState === 'complete') {
+        setTimeout(hideLoader, 300);
+    } else {
+        window.addEventListener('load', () => setTimeout(hideLoader, 300), { once: true });
     }
 });

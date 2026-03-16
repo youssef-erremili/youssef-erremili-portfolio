@@ -10,7 +10,8 @@
                 "ClipDrop API"
             ],
             "link": "https://github.com/youssef-erremili/Remove-background-App",
-            "demo": "https://removebackground.yousseferremili.com/"
+            "demo": "https://removebackground.yousseferremili.com/",
+            "slug": "background-remover"
         },
         {
             "title": "TempMail Generator",
@@ -25,7 +26,8 @@
                 "PrimeVue"
             ],
             "link": "https://github.com/youssef-erremili/Temp-Email",
-            "demo": "https://tempmail.yousseferremili.com/"
+            "demo": "https://tempmail.yousseferremili.com/",
+            "slug": "tempmail-generator"
         },
         {
             "title": "Blog platform",
@@ -38,7 +40,8 @@
                 "shtayeb reading time"
             ],
             "link": "https://github.com/youssef-erremili/blog-dev-web-app",
-            "demo": ""
+            "demo": "",
+            "slug": "blog-platform"
         },
         {
             "title": "ErrePress web app",
@@ -52,7 +55,8 @@
                 "Toast Notification"
             ],
             "link": "https://github.com/youssef-erremili/web-app-ErreXpress",
-            "demo": ""
+            "demo": "",
+            "slug": "errepress-web-app"
         },
         {
             "title": "Resume builder web app",
@@ -68,7 +72,8 @@
                 "htmltoPdf"
             ],
             "link": "https://github.com/youssef-erremili/Resume-Builder",
-            "demo": ""
+            "demo": "",
+            "slug": "resume-builder-web-app"
         },
         {
             "title": "Laravel-alert package",
@@ -79,7 +84,8 @@
                 "PHP"
             ],
             "link": "https://github.com/youssef-erremili/laravel-alert-package/",
-            "demo": ""
+            "demo": "",
+            "slug": "laravel-alert-package"
         },
         {
             "title": "Raja club athletic RESTApi",
@@ -90,7 +96,8 @@
                 "MySQL"
             ],
             "link": "https://github.com/youssef-erremili/Raja-club-Rest-api",
-            "demo": ""
+            "demo": "",
+            "slug": "raja-club-athletic-restapi"
         },
         {
             "title": "Pos system management",
@@ -104,7 +111,8 @@
                 "MySQL"
             ],
             "link": "https://github.com/youssef-erremili/Pos-system-cafe",
-            "demo": ""
+            "demo": "",
+            "slug": "pos-system-management"
         },
         {
             "title": "Shorten URL Website",
@@ -119,7 +127,8 @@
                 "MySQL"
             ],
             "link": "https://github.com/youssef-erremili/Shorten-URL",
-            "demo": ""
+            "demo": "",
+            "slug": "shorten-url-website"
         },
         {
             "title": "Web translator with API",
@@ -133,7 +142,8 @@
                 "Toast Notification"
             ],
             "link": null,
-            "demo": ""
+            "demo": "",
+            "slug": "web-translator-with-api"
         },
         {
             "title": "Weather website with API",
@@ -146,7 +156,8 @@
                 "API"
             ],
             "link": "https://github.com/youssef-erremili/Weather",
-            "demo": "https://weather.yousseferremili.com/"
+            "demo": "https://weather.yousseferremili.com/",
+            "slug": "weather-website-with-api"
         },
         {
             "title": "Quotes generator with API",
@@ -160,7 +171,8 @@
                 "Toast Notification"
             ],
             "link": "https://github.com/youssef-erremili/Quotes-Generator",
-            "demo": "https://quotesgenerator.yousseferremili.com/"
+            "demo": "https://quotesgenerator.yousseferremili.com/",
+            "slug": "quotes-generator-with-api"
         },
         {
             "title": "Sign up form with validation",
@@ -172,7 +184,8 @@
                 "JavaScript"
             ],
             "link": "https://github.com/youssef-erremili/modern-sign-up-page",
-            "demo": "https://youssef-erremili.github.io/modern-sign-up-page/"
+            "demo": "https://youssef-erremili.github.io/modern-sign-up-page/",
+            "slug": "sign-up-form-with-validation"
         },
         {
             "title": "ToDo list with JavaScript",
@@ -184,7 +197,8 @@
                 "JavaScript"
             ],
             "link": "https://github.com/youssef-erremili/To-Do-list",
-            "demo": "https://youssef-erremili.github.io/To-Do-list/"
+            "demo": "https://youssef-erremili.github.io/To-Do-list/",
+            "slug": "todo-list-with-javascript"
         },
         {
             "title": "Landing page school",
@@ -195,7 +209,8 @@
                 "CSS3"
             ],
             "link": "https://github.com/youssef-erremili/solicode-website-project",
-            "demo": "https://youssef-erremili.github.io/solicode-website-project/"
+            "demo": "https://youssef-erremili.github.io/solicode-website-project/",
+            "slug": "landing-page-school"
         },
         {
             "title": "Portfolio HTML5 & CSS3",
@@ -206,7 +221,8 @@
                 "CSS3"
             ],
             "link": "https://github.com/youssef-erremili/modern-portfolio",
-            "demo": "https://modernportfolio.yousseferremili.com/"
+            "demo": "https://modernportfolio.yousseferremili.com/",
+            "slug": "portfolio-html5-css3"
         },
         {
             "title": "Simple portfolio HTML5 & CSS3",
@@ -217,7 +233,8 @@
                 "CSS3"
             ],
             "link": "https://github.com/youssef-erremili/Simple-portfolio",
-            "demo": "https://youssef-erremili.github.io/Simple-portfolio/"
+            "demo": "https://youssef-erremili.github.io/Simple-portfolio/",
+            "slug": "simple-portfolio-html5-css3"
         }
     ]
 }
