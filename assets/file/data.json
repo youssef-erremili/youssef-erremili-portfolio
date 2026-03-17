@@ -160,47 +160,6 @@
             "slug": "weather-website-with-api"
         },
         {
-            "title": "Quotes generator with API",
-            "description": "I created a quotes generator using HTML, Tailwind, and an API. The API generates random quotes, and the interface makes it easy to display and interact with them.",
-            "image": "assets/image/quotegenerator.webp",
-            "technologies": [
-                "HTML5",
-                "Tailwind",
-                "JavaScript",
-                "API",
-                "Toast Notification"
-            ],
-            "link": "https://github.com/youssef-erremili/Quotes-Generator",
-            "demo": "https://quotesgenerator.yousseferremili.com/",
-            "slug": "quotes-generator-with-api"
-        },
-        {
-            "title": "Sign up form with validation",
-            "description": "I designed a signup page using HTML, CSS, and JavaScript with validation. Users can enter their information, and JavaScript ensures that all fields are correctly filled out before submission.",
-            "image": "assets/image/sign-up.webp",
-            "technologies": [
-                "HTML5",
-                "CSS3",
-                "JavaScript"
-            ],
-            "link": "https://github.com/youssef-erremili/modern-sign-up-page",
-            "demo": "https://youssef-erremili.github.io/modern-sign-up-page/",
-            "slug": "sign-up-form-with-validation"
-        },
-        {
-            "title": "ToDo list with JavaScript",
-            "description": "I made a to-do list using HTML, CSS, and JavaScript. You can add, delete, and update tasks easily. It helps you stay organized and manage your tasks smoothly.",
-            "image": "assets/image/todo-project.webp",
-            "technologies": [
-                "HTML5",
-                "CSS3",
-                "JavaScript"
-            ],
-            "link": "https://github.com/youssef-erremili/To-Do-list",
-            "demo": "https://youssef-erremili.github.io/To-Do-list/",
-            "slug": "todo-list-with-javascript"
-        },
-        {
             "title": "Landing page school",
             "description": "I made a cool landing page for school using HTML5 and CSS3. It shows off my work and skills in a neat and stylish way. Check it out to see what I can do.",
             "image": "assets/image/landing-page.webp",
@@ -211,30 +170,6 @@
             "link": "https://github.com/youssef-erremili/solicode-website-project",
             "demo": "https://youssef-erremili.github.io/solicode-website-project/",
             "slug": "landing-page-school"
-        },
-        {
-            "title": "Portfolio HTML5 & CSS3",
-            "description": "I made a cool portfolio using HTML5 and CSS3. It shows off my work and skills in a neat and stylish way. Check it out to see what I can do.",
-            "image": "assets/image/portfolio-project.webp",
-            "technologies": [
-                "HTML5",
-                "CSS3"
-            ],
-            "link": "https://github.com/youssef-erremili/modern-portfolio",
-            "demo": "https://modernportfolio.yousseferremili.com/",
-            "slug": "portfolio-html5-css3"
-        },
-        {
-            "title": "Simple portfolio HTML5 & CSS3",
-            "description": "I made a cool portfolio using HTML5 and CSS3. It shows off my work and skills in a neat and stylish way. Check it out to see what I can do.",
-            "image": "assets/image/simple-portfolio.webp",
-            "technologies": [
-                "HTML5",
-                "CSS3"
-            ],
-            "link": "https://github.com/youssef-erremili/Simple-portfolio",
-            "demo": "https://youssef-erremili.github.io/Simple-portfolio/",
-            "slug": "simple-portfolio-html5-css3"
         }
     ]
 }
