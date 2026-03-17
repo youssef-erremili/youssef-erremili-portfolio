@@ -55,6 +55,24 @@ document.addEventListener('alpine:init', () => {
                         this.loading = false;
                         if (this.project && this.project.title) {
                             document.title = this.project.title + " - Youssef Erremili";
+                            
+                            // Dynamically update canonical URL
+                            let canonicalLink = document.querySelector("link[rel='canonical']");
+                            if (!canonicalLink) {
+                                canonicalLink = document.createElement("link");
+                                canonicalLink.rel = "canonical";
+                                document.head.appendChild(canonicalLink);
+                            }
+                            canonicalLink.href = "https://yousseferremili.com/project?id=" + this.project.slug;
+
+                            // Dynamically update meta description
+                            let metaDesc = document.querySelector("meta[name='description']");
+                            if (!metaDesc) {
+                                metaDesc = document.createElement("meta");
+                                metaDesc.name = "description";
+                                document.head.appendChild(metaDesc);
+                            }
+                            metaDesc.content = this.project.description;
                         }
                     })
                     .catch(error => {
