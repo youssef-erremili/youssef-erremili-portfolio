@@ -1,0 +1,14 @@
+{
+  "cleanUrls": true,
+  "routes": [
+    { "src": "/assets/(.*)", "dest": "/assets/$1" },
+    { "src": "/robots\\.txt", "dest": "/robots.txt" },
+    { "src": "/sitemap\\.xml", "dest": "/sitemap.xml" },
+    { "src": "/favicon\\.ico", "dest": "/favicon.ico" },
+    { "src": "/project", "dest": "/project.html" },
+    { "src": "/project\\.html", "status": 308, "headers": { "Location": "/project" } },
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/index\\.html", "status": 308, "headers": { "Location": "/" } },
+    { "src": "/(.*)", "status": 404 }
+  ]
+}
