@@ -73,6 +73,53 @@ document.addEventListener('alpine:init', () => {
                                 document.head.appendChild(metaDesc);
                             }
                             metaDesc.content = this.project.description;
+
+                            // Update OG tags
+                            const ogTitle = document.getElementById('og-title');
+                            if (ogTitle) ogTitle.setAttribute('content', this.project.title + ' — Youssef Erremili');
+
+                            const ogDesc = document.getElementById('og-desc');
+                            if (ogDesc) ogDesc.setAttribute('content', this.project.description);
+
+                            const ogImage = document.getElementById('og-image');
+                            if (ogImage && this.project.image) 
+                                ogImage.setAttribute('content', 'https://yousseferremili.com/' + this.project.image);
+
+                            const ogUrl = document.getElementById('og-url');
+                            if (ogUrl) ogUrl.setAttribute('content', 'https://yousseferremili.com/project?id=' + this.project.slug);
+
+                            // Update Twitter tags
+                            const twTitle = document.getElementById('tw-title');
+                            if (twTitle) twTitle.setAttribute('content', this.project.title + ' — Youssef Erremili');
+
+                            const twDesc = document.getElementById('tw-desc');
+                            if (twDesc) twDesc.setAttribute('content', this.project.description);
+
+                            const twImage = document.getElementById('tw-image');
+                            if (twImage && this.project.image)
+                                twImage.setAttribute('content', 'https://yousseferremili.com/' + this.project.image);
+
+                            // Update canonical
+                            const canonical = document.getElementById('page-canonical');
+                            if (canonical) canonical.setAttribute('href', 'https://yousseferremili.com/project?id=' + this.project.slug);
+
+                            // Update page-level schema
+                            const schema = document.getElementById('project-schema');
+                            if (schema) {
+                                schema.textContent = JSON.stringify({
+                                    "@context": "https://schema.org",
+                                    "@type": "CreativeWork",
+                                    "name": this.project.title,
+                                    "description": this.project.description,
+                                    "url": "https://yousseferremili.com/project?id=" + this.project.slug,
+                                    "author": {
+                                        "@type": "Person",
+                                        "name": "Youssef Erremili",
+                                        "url": "https://yousseferremili.com"
+                                    },
+                                    "keywords": this.project.technologies.join(", ")
+                                });
+                            }
                         }
                     })
                     .catch(error => {
