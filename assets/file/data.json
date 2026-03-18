@@ -2,7 +2,7 @@
     "projects": [
         {
             "title": "Background Remover",
-            "description": "I created a web app using Vue.js, Tailwind CSS, and a API. The app allows users to perform various tasks through a dynamic and responsive interface.",
+            "description": "A Vue.js application that removes image backgrounds in one click using the ClipDrop API. Features a drag-and-drop upload interface built with Tailwind CSS, real-time API processing, and one-click PNG download. Live demo available at removebackground.yousseferremili.com.",
             "image": "assets/image/image-remover.webp",
             "technologies": [
                 "Vue.js",
@@ -45,7 +45,7 @@
         },
         {
             "title": "ErrePress web app",
-            "description": "I created a web app using Vue.js, Tailwind CSS, and a API. The app allows users to perform various tasks through a dynamic and responsive interface.",
+            "description": "ErrePress is a dynamic news and content aggregator built with Vue.js and Tailwind CSS. Fetches and displays content from external REST APIs with toast notifications for user feedback, responsive layout across all screen sizes, and fast client-side filtering.",
             "image": "assets/image/errepress.webp",
             "technologies": [
                 "HTML5",
@@ -60,7 +60,7 @@
         },
         {
             "title": "Resume builder web app",
-            "description": "I created a web app using Vue.js, Tailwind CSS, and a API. The app allows users to perform various tasks through a dynamic and responsive interface.",
+            "description": "A full-stack resume builder that lets users create, edit, and export professional resumes as PDF files. Built with vanilla JavaScript, PHP, and MySQL for data persistence, using the htmltoPdf library for client-side PDF generation without any external service dependency.",
             "image": "assets/image/resume-builder.webp",
             "technologies": [
                 "HTML5",
