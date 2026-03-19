@@ -852,18 +852,6 @@ video {
   height: 100%;
 }
 
-.h-10 {
-  height: 2.5rem;
-}
-
-.h-6 {
-  height: 1.5rem;
-}
-
-.h-7 {
-  height: 1.75rem;
-}
-
 .max-h-\[85\%\] {
   max-height: 85%;
 }
@@ -916,6 +904,10 @@ video {
   width: 92%;
 }
 
+.w-auto {
+  width: auto;
+}
+
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
@@ -923,14 +915,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-10 {
-  width: 2.5rem;
-}
-
-.w-auto {
-  width: auto;
 }
 
 .min-w-\[110px\] {
@@ -1892,11 +1876,6 @@ video {
   font-family: "JetBrains Mono", monospace;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -2444,8 +2423,8 @@ video {
     margin-top: 2.5rem;
   }
 
-  .md\:h-10 {
-    height: 2.5rem;
+  .md\:h-8 {
+    height: 2rem;
   }
 
   .md\:\!grid-cols-2 {
@@ -2484,6 +2463,10 @@ video {
 
   .lg\:mb-4 {
     margin-bottom: 1rem;
+  }
+
+  .lg\:h-8 {
+    height: 2rem;
   }
 
   .lg\:\!grid-cols-3 {
