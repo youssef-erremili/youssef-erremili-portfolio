@@ -131,6 +131,29 @@ document.addEventListener('alpine:init', () => {
             }
         }
     }));
+
+    Alpine.data('contactForm', () => ({
+        status: '',
+        async submitForm(e) {
+            const form = e.target;
+            this.status = 'sending';
+            try {
+                const res = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (res.ok) {
+                    this.status = 'success';
+                    form.reset();
+                } else {
+                    this.status = 'error';
+                }
+            } catch {
+                this.status = 'error';
+            }
+        }
+    }));
 });
 
 
